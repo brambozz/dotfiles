@@ -6,6 +6,7 @@ This repo contains various configuration files. This readme explains for some pr
 
 I have chosen to use [neovim](https://neovim.io/) as my default text editor. An interesting article that helped choosing between vim and neovim can be found [here](https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/).
 As I am learning vim, I will update my choices for keyboard remapping below. Since I use colemak, keys may not always remain logical. I will strive for ergonomics, but focus on learning to use vim first. However, since I plan on switching to more vim-like applications (e.g. terminal file manager, qutebrowser) the movement keys are probably important.
+See [here](https://neovim.io/doc/user/starting.html#vimrc) for where `init.vim` goes
 
 ## hjkl
 
