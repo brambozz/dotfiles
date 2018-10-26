@@ -11,6 +11,19 @@ See [here](https://neovim.io/doc/user/starting.html#vimrc) for where `init.vim` 
 ## hjkl
 
 This is a tricky debate (see [1], [2] or [3]). In conclusion, I do not like the idea of doing the h-stretch for navigation, but in vim you should hardly use that anyways. However, in browsing/file manager these movements may become more common. So I will put everything on jkl; as follows: j = down, k = up, l = right, ; = left. Keeping j and k as they are, because you use those most frequent, so index and middle finger is nice. Left movement is least occuring (see [3]), so pinky should be fine.
+I will also remap the capital letters accordingly.
+
+After moving hjkl as explained above, the n, i, e and o keys have been overwritten. Let's redefine these as I go along.
+i -> l: I suppose i is an often used key, so l seems like a nice place to put it. 
+o -> k: This is rather intuitive I feel, o opens a new line below cursor.
+
+## Esc
+
+Already now I feel that the escape key is a horrible place for its function. Let's see if some people came up with a nice remap.
+
+
+
+
 
 
 [1]: https://www.reddit.com/r/vim/comments/pu71n/remap_hjkl_to_jkl_anyone/
