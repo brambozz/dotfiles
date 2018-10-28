@@ -22,7 +22,7 @@ o -> k: This is rather intuitive I feel, o opens a new line below cursor.
 Already now I feel that the escape key is a horrible place for its function. Let's see if some people came up with a nice remap.
 
 # sxhkd
-***
+
 For defining hotkeys I went with the simple [sxhkd](https://github.com/baskerville/sxhkd). I wish to make the BackSpace (i.e. Caps lock, since I use colemak) a sort of default modifier key, because it is far better reachable than alt, super etc.
 The only mapping currently is BackSpace + {n, e, i, o} = {Down, Up, Right, Left}. This maps vim keys to the arrow key, such that is globally available.
 
