@@ -1,0 +1,13 @@
+clear mod3
+clear mod5
+
+keycode 66 = Mode_switch
+add mod3 = Hyper_L
+
+keycode  44 = n N Down J ntilde Ntilde idiaeresis Idiaeresis
+keycode  45 = e E Up K eacute Eacute oe OE
+keycode  46 = i I Right L iacute Iacute oslash Oslash
+keycode  47 = o O Left colon oacute Oacute paragraph degree
+
+
+
