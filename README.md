@@ -21,9 +21,14 @@ o -> k: This is rather intuitive I feel, o opens a new line below cursor.
 
 Already now I feel that the escape key is a horrible place for its function. Let's see if some people came up with a nice remap.
 
-# sxhkd
+# neio to arrow keys
 
-Having a lot of problems, so I think this is the best solution: set keyboard layout to colemak as usual. Then permanently remap the CapsLock key to a modifier key, such that it is properly recognized by sxhkd. Then see if we can get all this xdotool or xte to work.
+I chose to remap CapsLock, which is BackSpace on colemak, to the Mode_switch key. This allows me to easily remap Mode_switch + {n, e, i, o} to {Down, Up, Right, Left}. 
+Additionally I use the following command with xcape to still use it as a backspace on a single tap.
+```
+xcape -e 'Mode_switch=BackSpace'
+```
+# sxhkd
 
 For defining hotkeys I went with the simple [sxhkd](https://github.com/baskerville/sxhkd). I wish to make the BackSpace (i.e. Caps lock, since I use colemak) a sort of default modifier key, because it is far better reachable than alt, super etc.
 The only mapping currently is BackSpace + {n, e, i, o} = {Down, Up, Right, Left}. This maps vim keys to the arrow key, such that is globally available.
