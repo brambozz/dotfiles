@@ -23,7 +23,7 @@ Already now I feel that the escape key is a horrible place for its function. Let
 
 # sxhkd
 
-Does not work with xdotools, so maybe switch to xbindkeys instead.
+Having a lot of problems, so I think this is the best solution: set keyboard layout to colemak as usual. Then permanently remap the CapsLock key to a modifier key, such that it is properly recognized by sxhkd. Then see if we can get all this xdotool or xte to work.
 
 For defining hotkeys I went with the simple [sxhkd](https://github.com/baskerville/sxhkd). I wish to make the BackSpace (i.e. Caps lock, since I use colemak) a sort of default modifier key, because it is far better reachable than alt, super etc.
 The only mapping currently is BackSpace + {n, e, i, o} = {Down, Up, Right, Left}. This maps vim keys to the arrow key, such that is globally available.
