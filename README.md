@@ -23,17 +23,26 @@ Already now I feel that the escape key is a horrible place for its function. Let
 
 # neio to arrow keys
 
-I chose to remap CapsLock, which is BackSpace on colemak, to the Mode_switch key. This allows me to easily remap Mode_switch + {n, e, i, o} to {Down, Up, Right, Left}. 
-Additionally I use the following command with xcape to still use it as a backspace on a single tap.
+I chose to remap CapsLock, which is BackSpace on colemak, to the Mode_switch key. This allows me to easily remap Mode_switch + {n, e, i, o} to {Down, Up, Right, Left}. This is done via [xmodmap](https://wiki.archlinux.org/index.php/Xmodmap).
+Additionally I use the following command with [xcape](https://github.com/alols/xcape) to still use it as a backspace on a single tap.
 ```
 xcape -e 'Mode_switch=BackSpace'
 ```
+
+To make these changes happen automatically on boot:
+1. edit /etc/X11/xinit/xinitrc
+2. Add the following lines at the end
+```
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+xcape -e 'Mode_switch=BackSpace'
+```
+
 # sxhkd
 
 For defining hotkeys I went with the simple [sxhkd](https://github.com/baskerville/sxhkd). I wish to make the BackSpace (i.e. Caps lock, since I use colemak) a sort of default modifier key, because it is far better reachable than alt, super etc.
 The only mapping currently is BackSpace + {n, e, i, o} = {Down, Up, Right, Left}. This maps vim keys to the arrow key, such that is globally available.
 
-Dependencies: xdotool
+
 
 
 
