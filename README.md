@@ -31,10 +31,9 @@ xcape -e 'Mode_switch=BackSpace'
 
 To make these changes happen automatically on boot:
 1. edit /etc/X11/xinit/xinitrc
-2. Add the following lines at the end
+2. Add the following line at the end
 ```
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
-xcape -e 'Mode_switch=BackSpace'
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap && xcape -e 'Mode_switch=BackSpace'
 ```
 
 # sxhkd
