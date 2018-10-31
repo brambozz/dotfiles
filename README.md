@@ -21,6 +21,14 @@ o -> k: This is rather intuitive I feel, o opens a new line below cursor.
 
 Already now I feel that the escape key is a horrible place for its function. Let's see if some people came up with a nice remap.
 
+#### Set nvim as default editor
+
+Run the following line
+
+```
+export EDITOR=/usr/bin/nvim
+```
+
 # neio to arrow keys
 
 I chose to remap CapsLock, which is BackSpace on colemak, to the Mode_switch key. This allows me to easily remap Mode_switch + {n, e, i, o} to {Down, Up, Right, Left}. This is done via [xmodmap](https://wiki.archlinux.org/index.php/Xmodmap).
