@@ -16,6 +16,7 @@ I will also remap the capital letters accordingly.
 After moving hjkl as explained above, the n, i, e and o keys have been overwritten. Let's redefine these as I go along.
 i -> l: I suppose i is an often used key, so l seems like a nice place to put it. 
 o -> k: This is rather intuitive I feel, o opens a new line below cursor.
+e -> h
 
 #### Esc
 
