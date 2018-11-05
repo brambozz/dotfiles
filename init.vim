@@ -23,3 +23,6 @@
 " Keys that still need remapping (because they have been overwritten)
 " n. These will go to spots h and j, but first see their functions. 
 " Hopefully, nothing else will have to be removed.
+
+" Display line numbers
+:set numbers
