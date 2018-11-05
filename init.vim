@@ -25,4 +25,4 @@
 " Hopefully, nothing else will have to be removed.
 
 " Display line numbers
-:set numbers
+:set number
