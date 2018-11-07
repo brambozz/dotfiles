@@ -19,6 +19,8 @@
 :noremap K O
 :noremap h e
 :noremap H E
+:noremap j n
+:noremap J N
 
 " Keys that still need remapping (because they have been overwritten)
 " n. These will go to spots h and j, but first see their functions. 
