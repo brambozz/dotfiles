@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Simple script that locks the screen, displaying a blurred screenshot
+
+magick import -window root /tmp/lock_screenshot.png
+feh -x -F /tmp/lock_screenshot.png
+
