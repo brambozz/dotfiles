@@ -2,13 +2,16 @@
 
 # Simple script that locks the screen, displaying a blurred screenshot
 
-scrot /tmp/lock_screenshot.png
-convert /tmp/lock_screenshot.png -scale 384x216! -scale 1920x1080! \
+scrot -q 1 /tmp/lock_screenshot.png
+convert /tmp/lock_screenshot.png -scale 96x54! -scale 1920x1080! \
 	/tmp/lock_screenshot.png
-convert /tmp/lock_screenshot.png -set colorspace Gray -separate -average \
-	/tmp/lock_screenshot.png
+#convert /tmp/lock_screenshot.png -set colorspace Gray -separate -average \
+#	/tmp/lock_screenshot.png
 #convert /tmp/lock_screenshot.png -blur 0x10 \
 #	/tmp/lock_screenshot.png
-magick composite -gravity center ~/Documents/dotfiles/enter_password.png \
+magick composite -gravity center ~/Documents/repositories/dotfiles/enter_password.png \
 	/tmp/lock_screenshot.png /tmp/lock_screenshot.png
-feh -x -F -Y /tmp/lock_screenshot.png
+feh -x -F -Y /tmp/lock_screenshot.png &
+TEST=$!
+slock
+kill $TEST
