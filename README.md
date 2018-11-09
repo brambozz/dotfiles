@@ -14,9 +14,14 @@ This is a tricky debate (see [1], [2] or [3]). In conclusion, I do not like the 
 I will also remap the capital letters accordingly.
 
 After moving hjkl as explained above, the n, i, e and o keys have been overwritten. Let's redefine these as I go along.
+
 i -> l: I suppose i is an often used key, so l seems like a nice place to put it. 
+
 o -> k: This is rather intuitive I feel, o opens a new line below cursor.
+
 e -> h
+
+n -> j
 
 #### Esc
 
@@ -49,6 +54,19 @@ To make these changes happen automatically on boot:
 
 For defining hotkeys I went with the simple [sxhkd](https://github.com/baskerville/sxhkd). I wish to make the BackSpace (i.e. Caps lock, since I use colemak) a sort of default modifier key, because it is far better reachable than alt, super etc.
 The only mapping currently is BackSpace + {n, e, i, o} = {Down, Up, Right, Left}. This maps vim keys to the arrow key, such that is globally available.
+
+# slock
+
+To lock my screen, I would like to make a setup similar to [this post](https://www.reddit.com/r/unixporn/comments/9i5jev/slockbspwm_pretty_diy_screensaver_feat_suckless/). However, I would like it a bit more portable, since this is taylored towards bspwm. Also inspired by [this](http://plankenau.com/blog/post/gaussianlock).
+Idea:
+
+1. Make screenshot with either maim or scrot
+2. Blur the screenshot
+3. Display image (with feh or imagemagick)
+4. (opt) overlay png, for example broken screen or some fancy text
+5. slock (with unlock patch)
+6. close image (deletion is automatic on reboot if image is placed in /tmp)
+
 
 
 
