@@ -78,6 +78,8 @@ This is a list with things I want to switch to at some point.
 - st (terminal)
 - mpv (media player)
 - btpd (bittorrent client)
+- DASH (shell)
+
 
 
 
