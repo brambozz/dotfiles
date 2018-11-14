@@ -79,6 +79,7 @@ This is a list with things I want to switch to at some point.
 - mpv (media player)
 - btpd (bittorrent client)
 - DASH (shell)
+- Mutt (email client)
 
 
 
