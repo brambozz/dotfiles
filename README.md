@@ -67,6 +67,16 @@ Idea:
 5. slock (with unlock patch)
 6. close image (deletion is automatic on reboot if image is placed in /tmp)
 
+# Desired software list
+
+This is a list with things I want to switch to at some point.
+
+- Zathura (PDF viewer)
+- dwm (wm)
+- qutebrowser (browser)
+- nnn (file manager)
+- st (terminal)
+- mpv (media player)
 
 
 
