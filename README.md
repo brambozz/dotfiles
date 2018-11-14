@@ -77,6 +77,7 @@ This is a list with things I want to switch to at some point.
 - nnn (file manager)
 - st (terminal)
 - mpv (media player)
+- btpd (bittorrent client)
 
 
 
