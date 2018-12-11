@@ -1,0 +1,3 @@
+#!/bin/sh
+setxkbmap -model pc105 -layout us, us -variant colemak, basic -option grp:alt_shift_toggle, caps:hyper
+xcape -e 'Hyper_L=BackSpace'
