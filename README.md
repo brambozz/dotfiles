@@ -35,19 +35,22 @@ Run the following line
 export EDITOR=/usr/bin/nvim
 ```
 
-# neio to arrow keys
+# Basic keyboard setup
 
-I chose to remap CapsLock, which is BackSpace on colemak, to the Mode_switch key. This allows me to easily remap Mode_switch + {n, e, i, o} to {Down, Up, Right, Left}. This is done via [xmodmap](https://wiki.archlinux.org/index.php/Xmodmap).
+I chose to remap CapsLock, which is BackSpace on colemak, to the Hyper_L key. I might want to use this to remap {n, e, i, o} to {Down, Up, Right, Left}.
+At the moment I am leaving this for some other time, as I want to route everything through sxhkd.
+Pressing Alt+Shift will toggle between colemak and qwerty.
 Additionally I use the following command with [xcape](https://github.com/alols/xcape) to still use it as a backspace on a single tap.
 ```
-xcape -e 'Mode_switch=BackSpace'
+xcape -e 'Hyper_L=BackSpace'
 ```
 
 To make these changes happen automatically on boot:
 1. edit /etc/X11/xinit/xinitrc
-2. Add the following line at the end
+2. Add the following lines at the end
 ```
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap && xcape -e 'Mode_switch=BackSpace'
+setxkbmap -model pc105 -layout us, us -variant colemak, basic -option grp:alt_shift_toggle, caps:hyper
+xcape -e 'Hyper_L=BackSpace'
 ```
 
 # sxhkd
