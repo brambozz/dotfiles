@@ -8,6 +8,16 @@ I have chosen to use [neovim](https://neovim.io/) as my default text editor. An 
 As I am learning vim, I will update my choices for keyboard remapping below. Since I use colemak, keys may not always remain logical. I will strive for ergonomics, but focus on learning to use vim first. However, since I plan on switching to more vim-like applications (e.g. terminal file manager, qutebrowser) the movement keys are probably important.
 See [here](https://neovim.io/doc/user/starting.html#vimrc) for where `init.vim` goes
 
+#### Plugins
+
+I used [dein](https://github.com/Shougo/dein.vim) for managing plugins.
+I installed it using the recommended procedure, that is:
+
+```
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.cache/dein
+```
+
 #### hjkl
 
 This is a tricky debate (see [1], [2] or [3]). In conclusion, I do not like the idea of doing the h-stretch for navigation, but in vim you should hardly use that anyways. However, in browsing/file manager these movements may become more common. So I will put everything on jkl; as follows: j = down, k = up, l = right, ; = left. Keeping j and k as they are, because you use those most frequent, so index and middle finger is nice. Left movement is least occuring (see [3]), so pinky should be fine.

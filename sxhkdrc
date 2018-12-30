@@ -1,0 +1,13 @@
+# Configuration file for system wide shortcuts
+
+ctrl + alt + l
+	lock
+
+hyper + Return
+	xfce4-terminal	
+
+hyper + n
+	firefox
+
+ctrl + alt + Escape
+	bspc quit

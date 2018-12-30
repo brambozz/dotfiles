@@ -1,0 +1,18 @@
+#!/bin/sh
+
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Optional for future setup, might be most appropriate in xinitrc
+setxkbmap -model pc105 -layout us,us -variant colemak,basic -option grp:alt_shift_toggle, caps:hyper &
+#xcape -e 'Hyper_L=BackSpace' &
+
+
+sxhkd -c ~/Documents/repositories/dotfiles/sxhkdrc &
