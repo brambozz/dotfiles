@@ -18,6 +18,11 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.cache/dein
 ```
 
+Then for autocompletion I have [deoplete](https://github.com/Shougo/deoplete.nvim), 
+with the following sources:
+
++ [deoplete-jedi](https://github.com/zchee/deoplete-jedi)
+
 #### hjkl
 
 This is a tricky debate (see [1], [2] or [3]). In conclusion, I do not like the idea of doing the h-stretch for navigation, but in vim you should hardly use that anyways. However, in browsing/file manager these movements may become more common. So I will put everything on jkl; as follows: j = down, k = up, l = right, ; = left. Keeping j and k as they are, because you use those most frequent, so index and middle finger is nice. Left movement is least occuring (see [3]), so pinky should be fine.

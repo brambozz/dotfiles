@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# A simple rofi shutdown prompt
+# To be riced, but it is at least functional
+
+choice=$(echo -e \
+"(a) Shutdown\n\
+(b) Hibernate\n\
+(c) Sleep\n" | \
+rofi -dmenu -format 'i' -location 1 -width 100 -lines 3 -p "Shutdown?")
+
+# If choice == 0; shutdown
+if [ $choice -eq 0 ]
+then
+	echo "Shutting down"
+fi
+# If choice == 1; hibernate
+if [ $choice -eq 1 ]
+then
+	echo "Hibernating"
+fi
+# If choice == 2; sleep
+if [ $choice -eq 2 ]
+then
+	echo "Sleeping"
+fi

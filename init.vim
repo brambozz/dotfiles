@@ -1,4 +1,4 @@
-"vimrc file Bram de Wilde, see GitHub for changelog 
+" vimrc file Bram de Wilde, see GitHub for changelog 
 "--------------------------------------------------
 " This file assumes the keyboard layout is Colemak
 
@@ -22,16 +22,19 @@
 :noremap j n
 :noremap J N
 
-" Keys that still need remapping (because they have been overwritten)
-" n. These will go to spots h and j, but first see their functions. 
-" Hopefully, nothing else will have to be removed.
+" Map scrolling more logically
+:noremap <C-N> <C-D>
+:noremap <C-E> <C-U>
 
 " Display line numbers
 :set number
 
+" Nice colored column 72 to keep everything nicely readabe
 :set colorcolumn=72
 
-" Plugin manager: dein
+:let g:tex_flavor = 'latex'
+
+" Plugin manager: dein (refer to :h dein for instructions)
 if &compatible
   set nocompatible
 endif
@@ -41,16 +44,30 @@ set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
 
+  " Add plugins here
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
+  call dein#add('zchee/deoplete-jedi')
+  call dein#add('dracula/vim')
+  call dein#add('lervag/vimtex')
 
   call dein#end()
   call dein#save_state()
 endif
 
-filetype plugin indent on
+" filetype plugin indent on
 syntax enable
+color dracula
+
+" Disable automatic folding
+:set nofoldenable
+
+
+let g:deoplete#enable_at_startup = 1
+
+" Set latex completion
+call deoplete#custom#var('omni', 'input_patterns', {
+	\ 'tex': g:vimtex#re#deoplete
+	\})
+let g:vimtex_complete_close_braces = 1
+

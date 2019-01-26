@@ -1,13 +1,72 @@
 # Configuration file for system wide shortcuts
-
 ctrl + alt + l
 	lock
 
+ctrl + alt + Escape
+	bspc quit
+
+# Reload sxhkd
+ctrl + alt + r
+	pkill -USR1 -x sxhkd
+
+# Window management
+# =================
+#
+# Central idea is to press a mod key with the left hand and
+# homerow +/- 1 keys to perform various actions.
+# Most used actions will get hyper, then alt, then super
+
+# Hyper bound actions
+# -------------------
+
+# Focus windows with {n, e, i, o}
+hyper + {n, e, i, o}
+	bspc node {south, north, east, west} -f
+
+# Primary desktop navigation
+hyper + {l, u, y, semicolon}
+	bspc desktop {1, 2, 3, 4} -f
+
+# Launch window in any direction
+hyper + {m, comma, period, slash}
+	bspc node -p {south, north, east, west} && rofi -show run
+
+# Close a window 
+hyper + h
+	bspc node -c
+
+# Monocle/tiled toggle
+hyper + k
+	bspc desktop -l next
+
+# Launch file browser
+hyper + space
+	thunar
+
+# Launch terminal
 hyper + Return
 	xfce4-terminal	
 
-hyper + n
+# Launch web browser
+hyper + j
 	firefox
 
-ctrl + alt + Escape
-	bspc quit
+# Hyper + Alt bound actions
+# -----------------
+# Resize windows in any direction
+# Always pulls on the outside of a window, so use it smartly
+hyper + alt + {n, e, i, o}
+	bspc node --resize {bottom 0 20, top 0 -20, right 20 0, left -20 0}
+
+# Secondary desktop navigation
+hyper + alt + {l, u, y, semicolon}
+	bspc desktop {5, 6, 7, 8} -f
+
+# Super bound actions
+# -------------------
+
+# Wishlist
+# --------
+# Switching to desktop 1 automatically open e.g. web browser if it is
+# not open yet.
+
