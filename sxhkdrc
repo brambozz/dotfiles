@@ -1,6 +1,26 @@
 # Configuration file for system wide shortcuts
+#
+# TODO
+# ====
+# + Allow Esc to cancel preselection after rofi
+# + After preselection wait for input: 
+# 	Enter: launch terminal in preselected node
+# 	Space: launch file manager in preselected node
+# 	j: launch web browser in preselected node
+# 	r: launch rofi 
+# 	Any other key: cancel preselection
+# + Switching to desktop 1 automatically open e.g. web browser if it is
+# not open yet.
+# + For the preselection shortcut, if there is no window on a desktop,
+# it should still work
+
+# System related shortcuts
+# ========================
 ctrl + alt + l
 	lock
+
+ctrl + alt + q
+	shutdown_prompt
 
 ctrl + alt + Escape
 	bspc quit
@@ -14,7 +34,7 @@ ctrl + alt + r
 #
 # Central idea is to press a mod key with the left hand and
 # homerow +/- 1 keys to perform various actions.
-# Most used actions will get hyper, then alt, then super
+# Most used actions will get hyper, then hyper+alt, then super
 
 # Hyper bound actions
 # -------------------
@@ -51,6 +71,10 @@ hyper + Return
 hyper + j
 	firefox
 
+# Show battery/time 
+hyper + t
+	battery_time
+
 # Hyper + Alt bound actions
 # -----------------
 # Resize windows in any direction
@@ -62,11 +86,13 @@ hyper + alt + {n, e, i, o}
 hyper + alt + {l, u, y, semicolon}
 	bspc desktop {5, 6, 7, 8} -f
 
+# Move windows around in any direction
+hyper + alt + {m, comma, period, slash}
+	bspc node -s {south, north, east, west} --follow
+
 # Super bound actions
 # -------------------
 
 # Wishlist
 # --------
-# Switching to desktop 1 automatically open e.g. web browser if it is
-# not open yet.
 

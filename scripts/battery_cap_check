@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check battery capacity and send notification if <25 %
+capacity=$(cat /sys/class/power_supply/BAT0/capacity)
+status=$(cat /sys/class/power_supply/BAT0/status)
+
+if [ $status != "Charging" -a $capacity -le 25 ]
+then
+	notify-send -u critical "Battery is dying"
+fi
+
+
+

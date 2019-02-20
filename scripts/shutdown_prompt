@@ -4,23 +4,29 @@
 # To be riced, but it is at least functional
 
 choice=$(echo -e \
-"(a) Shutdown\n\
-(b) Hibernate\n\
-(c) Sleep\n" | \
-rofi -dmenu -format 'i' -location 1 -width 100 -lines 3 -p "Shutdown?")
+"a) Poweroff\n\
+b) Hibernate\n\
+c) Suspend\n\
+d) Reboot" | \
+rofi -dmenu -format 'i' -location 1 -width 100 -lines 4 -p "Shutdown?" -i)
 
 # If choice == 0; shutdown
 if [ $choice -eq 0 ]
 then
-	echo "Shutting down"
+	systemctl poweroff
 fi
 # If choice == 1; hibernate
 if [ $choice -eq 1 ]
 then
-	echo "Hibernating"
+	systemctl hibernate
 fi
 # If choice == 2; sleep
 if [ $choice -eq 2 ]
 then
-	echo "Sleeping"
+	systemctl suspend
+fi
+# If choice == 3; restart
+if [ $choice -eq 3 ]
+then
+	systemctl reboot
 fi

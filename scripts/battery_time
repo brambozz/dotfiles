@@ -2,5 +2,12 @@
 
 # Send battery and time notification
 capacity=$(cat /sys/class/power_supply/BAT0/capacity)
+status=$(cat /sys/class/power_supply/BAT0/status)
 current_time=$(date +%H:%M)
-notify-send "$capacity% | $current_time"
+
+if [ $status = "Charging" ]
+then
+	notify-send "$capacity% ▲ $current_time"
+else
+	notify-send "$capacity% ▼ $current_time"
+fi

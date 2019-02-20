@@ -85,6 +85,19 @@ Idea:
 5. slock (with unlock patch)
 6. close image (deletion is automatic on reboot if image is placed in /tmp)
 
+# cron
+
+In the scripts directory there are a couple of scripts that I set up
+to run in cron. Some of them require notifications, and cron needs
+some environment variables to run properly. I recommend putting the
+following lines on top of the crontab.
+
+```
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+DISPLAY=:0
+```
+
 # Desired software list
 
 This is a list with things I want to switch to at some point.
