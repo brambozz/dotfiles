@@ -68,8 +68,12 @@ I set my environment variables in ~/.bash_profile
 ## Additional installed packages
 `xorg-xbacklight` for brightness control in sxhkd
 
-![Neovim](https://neovim.io/images/logo@2x.png "Neovim")
-***
+## st
+
+I use [st](https://st.suckless.org/) as my terminal emulator and have
+my own fork [here](https://github.org/brambozz/st/).
+
+## neovim
 I have chosen to use [neovim](https://neovim.io/) as my default 
 text editor. 
 An interesting article that helped choosing between vim and neovim can 
@@ -156,7 +160,7 @@ xcape -e 'Hyper_L=BackSpace'
 ```
 
 To make these changes happen automatically on boot:
-1. edit /etc/X11/xinit/xinitrc
+1. edit ~/.xinitrc
 2. Add the following lines at the end
 
 ```
