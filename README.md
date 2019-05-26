@@ -222,6 +222,32 @@ This is a list with things I want to switch to at some point.
 - DASH (shell)
 - Mutt (email client)
 
+# Package list
+This is a list of all packages to install after a fresh Arch install.
+
+```
+sudo
+tlp
+tp_smapi
+acpi_call
+git
+xorg-xinit
+bspwm
+sxhkd
+xorg-xbacklight
+rofi
+nvim
+xcape
+```
+
+And from personal forks
+```
+nnn
+slock
+st
+```
+
+
 [1]: https://www.reddit.com/r/vim/comments/pu71n/remap_hjkl_to_jkl_anyone/
 [2]: https://www.reddit.com/r/vim/comments/1lz25q/why_hjkl_for_navigation_not_jkl/
 [3]: http://xahlee.info/kbd/vi_hjkl_vs_inverted_t_ijkl_arrow_keys.html
