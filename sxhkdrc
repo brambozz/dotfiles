@@ -14,10 +14,14 @@
 # + For the preselection shortcut, if there is no window on a desktop,
 # it should still work
 
+# Initialization
+# ==============
+export BACKLIGHT_ID=666
+
 # System related shortcuts
 # ========================
 ctrl + alt + l
-	lock
+	lock_bspwm
 
 ctrl + alt + q
 	shutdown_prompt
@@ -65,15 +69,20 @@ hyper + space
 
 # Launch terminal
 hyper + Return
-	xfce4-terminal	
+	$TERM
 
 # Launch web browser
 hyper + j
-	firefox
+	$BROWSER
 
 # Show battery/time 
 hyper + t
 	battery_time
+
+# Increase/decrease screen brightness
+hyper + {q, w}
+	xbacklight {-dec, -inc} 10; \
+	notify-send -p -r 666 "$(xbacklight -get)"
 
 # Hyper + Alt bound actions
 # -----------------

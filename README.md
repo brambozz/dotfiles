@@ -142,6 +142,21 @@ Add the following line to ~/.profile
 export EDITOR=/usr/bin/nvim
 ```
 
+#### Use nvim as pager
+I use nvim as pager with 
+[nvimpager](https://github.com/lucc/nvimpager). 
+Add the following lines to `~/.bash_profile`
+```
+export PAGER=nvimpager
+export MANPAGER=nvimpager
+```
+And run the following commands to set it for git
+```
+git config --global color.pager no
+git config --global core.pager nvimpager
+```
+And symlink `nvimpager/init.vim` to `~/.config/nvimpager/init.vim`.
+
 # Basic keyboard setup
 
 I chose to remap CapsLock, which is BackSpace on colemak, 
@@ -208,6 +223,33 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 DISPLAY=:0
 ```
 
+I check my battery capacity with cron, with the following line
+in the crontab:
+
+```
+*/5 * * * * battery_cap_check
+```
+
+# yay
+
+I use `yay` as AUR helper.
+Install it like this:
+
+```
+git clone https://aur.archlinux.org/yay-git
+cd yay
+makepkg -si
+```
+
+# dunst
+
+I use `dunst` as my notification daemon. It is started in `bspwmrc`.
+Make a symbolic link to `dunstrc` in `~/.config/dunst/dunstrc'.
+
+# scripts
+In the scripts directory there are a number of scripts. 
+I make symbolic links to all of them in /usr/local/bin.
+
 # Desired software list
 
 This is a list with things I want to switch to at some point.
@@ -238,6 +280,17 @@ xorg-xbacklight
 rofi
 nvim
 xcape
+make
+pkg-config
+gcc
+tcc
+dunst
+fakeroot
+patch
+cronie
+task
+pandoc
+libnotify-id (aur)
 ```
 
 And from personal forks

@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # Send battery and time notification
-capacity=$(cat /sys/class/power_supply/BAT0/capacity)
-status=$(cat /sys/class/power_supply/BAT0/status)
+capacity0=$(cat /sys/class/power_supply/BAT0/capacity)
+capacity1=$(cat /sys/class/power_supply/BAT1/capacity)
+status0=$(cat /sys/class/power_supply/BAT0/status)
+status1=$(cat /sys/class/power_supply/BAT1/status)
 current_time=$(date +%H:%M)
 
-if [ $status = "Charging" ]
+if [ $status0 = "Charging" ] || [ $status1 = "Charging" ]
 then
-	notify-send "$capacity% ▲ $current_time"
+	notify-send "$capacity0/$capacity1% ▲ $current_time"
 else
-	notify-send "$capacity% ▼ $current_time"
+	notify-send "$capacity0/$capacity1% ▼ $current_time"
 fi

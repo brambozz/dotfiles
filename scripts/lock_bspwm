@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Simple script that locks the screen, showing the pipes screensaver
+bspc desktop -f lock  # This is a special desktop setup in bspwmrc
+st pipes.sh -t 6 &  # This could also be replaced with a blurred screenshot
+bspc desktop -l monocle
+slock
+bspc node -c
+bspc desktop -l tiled
+bspc desktop -f last

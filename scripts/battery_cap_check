@@ -1,4 +1,8 @@
 #!/bin/bash
+# Export environment variables for running from cron
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export DISPLAY=:0
 
 # Check battery capacity and send notification if <25 %
 capacity=$(cat /sys/class/power_supply/BAT0/capacity)
@@ -8,6 +12,3 @@ if [ $status != "Charging" -a $capacity -le 25 ]
 then
 	notify-send -u critical "Battery is dying"
 fi
-
-
-
