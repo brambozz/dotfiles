@@ -33,6 +33,22 @@ ctrl + alt + Escape
 ctrl + alt + r
 	pkill -USR1 -x sxhkd
 
+# Audio shortcuts
+# ===============
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+	pulsemixer --change-volume {+5,-5}; \
+	notify-send -p -r 555 "Volume: $(pulsemixer --get-volume)"
+
+XF86AudioMute
+	pulsemixer --toggle-mute; \
+	notify-send -p -r 555 "Volume: $(pulsemixer --get-mute)"
+
+# Brightness keys
+# ===============
+{XF86MonBrightnessDown, XF86MonBrightnessUp}
+	xbacklight {-dec, -inc} 10; \
+	notify-send -p -r 666 "Backlight: $(xbacklight -get)"
+
 # Window management
 # =================
 #
@@ -82,7 +98,17 @@ hyper + t
 # Increase/decrease screen brightness
 hyper + {q, w}
 	xbacklight {-dec, -inc} 10; \
-	notify-send -p -r 666 "$(xbacklight -get)"
+	notify-send -p -r 666 "Backlight: $(xbacklight -get)"
+
+# Raise/lower volume
+hyper + {a, r}
+	pulsemixer --change-volume {-5,+5}; \
+	notify-send -p -r 555 "Volume: $(pulsemixer --get-volume)"
+
+# Mute audio
+hyper + s
+	pulsemixer --toggle-mute; \
+	notify-send -p -r 555 "Volume: $(pulsemixer --get-mute)"
 
 # Hyper + Alt bound actions
 # -----------------
@@ -101,7 +127,3 @@ hyper + alt + {m, comma, period, slash}
 
 # Super bound actions
 # -------------------
-
-# Wishlist
-# --------
-

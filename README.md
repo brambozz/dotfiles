@@ -179,8 +179,8 @@ To make these changes happen automatically on boot:
 2. Add the following lines at the end
 
 ```
-setxkbmap -model pc105 -layout us, us -variant colemak, basic -option grp:alt_shift_toggle, caps:hyper
-xcape -e 'Hyper_L=BackSpace'
+setxkbmap -model pc105 -layout us,us -variant colemak,basic -option grp:alt_shift_toggle, caps:hyper &
+xcape -e 'Hyper_L=BackSpace' &
 ```
 
 # sxhkd
@@ -246,9 +246,17 @@ makepkg -si
 I use `dunst` as my notification daemon. It is started in `bspwmrc`.
 Make a symbolic link to `dunstrc` in `~/.config/dunst/dunstrc'.
 
+# pulseaudio
+
+For now I will use `pulseaudio` as my audio server, but I may 
+tweak this somewhat in the future for use with Ardour.
+As a mixer, I will use `pulsemixer` for now, but might also try
+`pamixer`, as it seems to be a bit simpler.
+
 # scripts
 In the scripts directory there are a number of scripts. 
 I make symbolic links to all of them in /usr/local/bin.
+
 
 # Desired software list
 
@@ -290,6 +298,7 @@ patch
 cronie
 task
 pandoc
+pulseaudio
 libnotify-id (aur)
 ```
 
