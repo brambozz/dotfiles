@@ -3,6 +3,11 @@
 # A simple rofi shutdown prompt
 # To be riced, but it is at least functional
 
+# I could make this better by not using rofi, but rather just display
+# an image displaying the various options with their key characters.
+# Then read a single character with `read -n1 answer` and enter
+# the if statements below.
+
 choice=$(echo -e \
 "a) Poweroff\n\
 b) Hibernate\n\
