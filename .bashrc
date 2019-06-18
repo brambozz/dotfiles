@@ -15,7 +15,18 @@ alias ga='git add'
 alias gau='git add -u'
 alias gc='git commit -m '
 
-# nnn aliases
-alias f='nnn -d -l'
+# nnn cd on quit
+export NNN_TMPFILE="/tmp/nnn"
+
+f()
+{
+        nnn -d -l "$@"
+
+        if [ -f $NNN_TMPFILE ]; then
+                . $NNN_TMPFILE
+                rm -f $NNN_TMPFILE > /dev/null
+        fi
+}
 
 PS1='[\u@\h \W]\$ '
+
