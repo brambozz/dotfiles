@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99999 285.75001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="shutdown_prompt.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="1024.2897"
+     inkscape:cy="586.33129"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1892"
+     inkscape:window-height="1052"
+     inkscape:window-x="12"
+     inkscape:window-y="12"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-11.249983)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.02351952px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50058794"
+       x="201.36983"
+       y="64.39904"
+       id="text3715"><tspan
+         sodipodi:role="line"
+         id="tspan3713"
+         x="201.36983"
+         y="64.39904"
+         style="stroke-width:0.50058794">(p)oweroff</tspan></text>
+    <text
+       id="text3719"
+       y="124.8797"
+       x="197.66919"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.02351952px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50058794"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.50058794"
+         y="124.8797"
+         x="197.66919"
+         id="tspan3717"
+         sodipodi:role="line">(h)ibernate</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.02351952px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50058794"
+       x="204.20518"
+       y="183.83514"
+       id="text3723"><tspan
+         sodipodi:role="line"
+         id="tspan3721"
+         x="204.20518"
+         y="183.83514"
+         style="stroke-width:0.50058794">(s)uspend</tspan></text>
+    <text
+       id="text3727"
+       y="244.3158"
+       x="212.75038"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.02351952px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50058794"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.50058794"
+         y="244.3158"
+         x="212.75038"
+         id="tspan3725"
+         sodipodi:role="line">(r)eboot</tspan></text>
+  </g>
+</svg>

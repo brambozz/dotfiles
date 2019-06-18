@@ -24,7 +24,7 @@ ctrl + alt + l
 	lock_bspwm
 
 ctrl + alt + q
-	shutdown_prompt
+	st shutdown_prompt
 
 ctrl + alt + Escape
 	bspc quit

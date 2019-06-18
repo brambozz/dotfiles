@@ -36,7 +36,7 @@ After that I set the thresholds to:
 
 BAT0 (Internal battery):
 start: 45%
-stop: 55%
+stop: 60%
 
 BAT1 (Swappable battery):
 start: 45%
@@ -263,10 +263,7 @@ I make symbolic links to all of them in /usr/local/bin.
 This is a list with things I want to switch to at some point.
 
 - Zathura (PDF viewer)
-- dwm (wm)
 - qutebrowser (browser)
-- nnn (file manager)
-- st (terminal)
 - mpv (media player)
 - btpd (bittorrent client)
 - DASH (shell)
@@ -299,6 +296,7 @@ cronie
 task
 pandoc
 pulseaudio
+xorg-xrandr
 libnotify-id (aur)
 ```
 

@@ -1,37 +1,35 @@
 #!/bin/sh
 
-# A simple rofi shutdown prompt
-# To be riced, but it is at least functional
+# A simple shutdown prompt with a custom image
 
-# I could make this better by not using rofi, but rather just display
-# an image displaying the various options with their key characters.
-# Then read a single character with `read -n1 answer` and enter
-# the if statements below.
+# Display image with following options
+# (p)oweroff
+# (h)ibernate
+# (s)uspend
+# (r)eboot
+feh -F -Y ~/repositories/dotfiles/misc/shutdown_prompt.png &
+FEH_ID=$!
 
-choice=$(echo -e \
-"a) Poweroff\n\
-b) Hibernate\n\
-c) Suspend\n\
-d) Reboot" | \
-rofi -dmenu -format 'i' -location 1 -width 100 -lines 4 -p "Shutdown?" -i)
+# Read a single character
+read -n 1 choice
 
-# If choice == 0; shutdown
-if [ $choice -eq 0 ]
+# Kill the image process
+kill $FEH_ID
+
+# Execute the chosen option
+if [ $choice = 'p' ]
 then
 	systemctl poweroff
 fi
-# If choice == 1; hibernate
-if [ $choice -eq 1 ]
+if [ $choice = 'h' ]
 then
 	systemctl hibernate
 fi
-# If choice == 2; sleep
-if [ $choice -eq 2 ]
+if [ $choice = 's' ]
 then
 	systemctl suspend
 fi
-# If choice == 3; restart
-if [ $choice -eq 3 ]
+if [ $choice = 'r' ]
 then
 	systemctl reboot
 fi
