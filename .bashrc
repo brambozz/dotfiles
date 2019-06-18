@@ -7,6 +7,7 @@
 
 # Alias definitions
 alias ls='ls --color=auto'
+alias lampp='sudo /opt/lampp/lampp'
 
 # Git aliases
 alias gst='git status'
