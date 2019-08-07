@@ -2,16 +2,20 @@
 
 bspc monitor -d 1 2 3 4 5 6 7 8 lock
 
-bspc config border_width         2
-bspc config window_gap          12
+bspc config border_width         4
+bspc config window_gap         	 6 
 
-bspc config split_ratio          0.52
+# Color configuration
+# %%base16_template: bspwm##default %%
+# base16-gruvbox-dark-hard
+
+bspc config active_border_color \#d5c4a1
+bspc config normal_border_color \#1d2021
+# %%base16_template_end%%
+
+bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-
-# Optional for future setup, might be most appropriate in xinitrc
-#setxkbmap -model pc105 -layout us,us -variant colemak,basic -option grp:alt_shift_toggle, caps:hyper &
-#xcape -e 'Hyper_L=BackSpace' &
 
 sxhkd &
 dunst &

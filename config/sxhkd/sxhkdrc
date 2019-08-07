@@ -14,10 +14,6 @@
 # + For the preselection shortcut, if there is no window on a desktop,
 # it should still work
 
-# Initialization
-# ==============
-export BACKLIGHT_ID=666
-
 # System related shortcuts
 # ========================
 ctrl + alt + l
@@ -46,8 +42,13 @@ XF86AudioMute
 # Brightness keys
 # ===============
 {XF86MonBrightnessDown, XF86MonBrightnessUp}
-	xbacklight {-dec, -inc} 10; \
-	notify-send -p -r 666 "Backlight: $(xbacklight -get)"
+	light {-U,-A} 10; \
+	notify-send -p -r 666 "Backlight: $(light)"
+
+# Miscellaneous keys
+# ==================
+Print
+	flameshot gui
 
 # Window management
 # =================
@@ -79,9 +80,9 @@ hyper + h
 hyper + k
 	bspc desktop -l next
 
-# Launch file browser
+# Launch app launcher
 hyper + space
-	thunar
+	rofi -show run
 
 # Launch terminal
 hyper + Return
@@ -97,8 +98,8 @@ hyper + t
 
 # Increase/decrease screen brightness
 hyper + {q, w}
-	xbacklight {-dec, -inc} 10; \
-	notify-send -p -r 666 "Backlight: $(xbacklight -get)"
+	light {-U,-A} 10; \
+	notify-send -p -r 666 "Backlight: $(light)"
 
 # Raise/lower volume
 hyper + {a, r}
