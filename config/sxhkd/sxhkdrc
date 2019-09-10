@@ -29,6 +29,10 @@ ctrl + alt + Escape
 ctrl + alt + r
 	pkill -USR1 -x sxhkd
 
+# Go to previous window
+hyper + g
+	bspc node -f prev
+
 # Audio shortcuts
 # ===============
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}

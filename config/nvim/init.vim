@@ -35,27 +35,27 @@
 :let g:tex_flavor = 'latex'
 
 " Plugin manager: dein (refer to :h dein for instructions)
-"if &compatible
-"  set nocompatible
-"endif
+if &compatible
+  set nocompatible
+endif
 " Add the dein installation directory into runtimepath
-"set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-"if dein#load_state('~/.cache/dein')
-"  call dein#begin('~/.cache/dein')
-"
-  " Add plugins here
-"  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+ " Add plugins here
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 "  call dein#add('Shougo/deoplete.nvim')
 "  call dein#add('zchee/deoplete-jedi')
 "  call dein#add('dracula/vim')
-"  call dein#add('lervag/vimtex')
+  call dein#add('lervag/vimtex')
 
-"  call dein#end()
-"  call dein#save_state()
-"endif
+  call dein#end()
+  call dein#save_state()
+endif
 
-" filetype plugin indent on
+filetype plugin indent on
 syntax enable
 " color dracula
 

@@ -39,20 +39,28 @@ start: 45%
 stop: 60%
 
 BAT1 (Swappable battery):
-start: 45%
+start: 75%
 stop: 80%
 
 Might even consider 60% if I only travel in the train.
 
 Also enable the service, such that it starts at boot.
 
-`git`
-
 ## Xorg/xinit
 
 Follow the instructions on the 
 [Arch wiki](https://wiki.archlinux.org/index.php/Xorg).
 Also those regarding [xinit](https://wiki.archlinux.org/index.php/Xinit).
+
+## Hibernation
+
+Do the following things to enable hibernation.
+
+Add the resume hook to `/etc/mkinitcpio.conf` and the regenerate the
+boot image with `sudo mkinitcpio -p linux`.
+
+Since I use systemd-boot, I also had to add `resume=/dev/sda3` to options
+under `/boot/loader/entries/arch.conf`.
 
 ## bspwm
 
@@ -66,7 +74,7 @@ sxhkdrc in my dotfiles repo.
 I set my environment variables in ~/.bash_profile
 
 ## Additional installed packages
-`xorg-xbacklight` for brightness control in sxhkd
+`light` for brightness control in sxhkd
 
 ## st
 
@@ -253,6 +261,13 @@ tweak this somewhat in the future for use with Ardour.
 As a mixer, I will use `pulsemixer` for now, but might also try
 `pamixer`, as it seems to be a bit simpler.
 
+# Color management
+
+For colors I use base16. Install the python builder via
+`pip install pybase16-builder`.
+Then update any templates or schemes through 
+`pybase16 update -c`
+
 # scripts
 In the scripts directory there are a number of scripts. 
 I make symbolic links to all of them in /usr/local/bin.
@@ -297,6 +312,11 @@ task
 pandoc
 pulseaudio
 xorg-xrandr
+python-pip
+networkmanager
+wpa_supplicant
+wireless_tools
+gnome-keyring
 libnotify-id (aur)
 ```
 
@@ -306,7 +326,6 @@ nnn
 slock
 st
 ```
-
 
 [1]: https://www.reddit.com/r/vim/comments/pu71n/remap_hjkl_to_jkl_anyone/
 [2]: https://www.reddit.com/r/vim/comments/1lz25q/why_hjkl_for_navigation_not_jkl/
