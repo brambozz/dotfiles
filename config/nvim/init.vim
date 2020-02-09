@@ -57,7 +57,8 @@ endif
 
 filetype plugin indent on
 syntax enable
-" color dracula
+set termguicolors
+color base16
 
 " Disable automatic folding
 :set nofoldenable
