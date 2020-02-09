@@ -11,6 +11,7 @@ export BROWSER=firefox
 export TERM=st
 export PAGER=nvimpager
 export MANPAGER=nvimpager
+export XDG_CONFIG_HOME=$HOME/.config
 
 # Alias definitions
 

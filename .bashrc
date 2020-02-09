@@ -20,7 +20,8 @@ alias api='cd ~/repositories/finesse/finesse/api'
 
 # Git aliases
 alias gst='git status'
-alias gp='git pull'
+alias gpl='git pull'
+alias gps='git push'
 alias ga='git add'
 alias gau='git add -u'
 alias gc='git commit -e'
@@ -30,7 +31,7 @@ export NNN_TMPFILE="/tmp/nnn"
 
 f()
 {
-        nnn -d -l "$@"
+        nnn -l "$@"
 
         if [ -f $NNN_TMPFILE ]; then
                 . $NNN_TMPFILE
@@ -40,13 +41,26 @@ f()
 
 sf()
 {
-        sudo nnn -d -l "$@"
+        sudo nnn -l "$@"
 
         if [ -f $NNN_TMPFILE ]; then
                 . $NNN_TMPFILE
                 rm -f $NNN_TMPFILE > /dev/null
         fi
 }
+
+# scan function
+scan()
+{
+	# First argument is output file
+
+	# Scan document
+	scanimage --device "pixma:04A91734_D5FC46" --format=png > /tmp/scan.png
+
+	# Convert to pdf
+	convert /tmp/scan.png $1
+}
+
 
 PS1='[\u@\h \W]\$ '
 
