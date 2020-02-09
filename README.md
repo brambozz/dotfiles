@@ -1,3 +1,19 @@
+# Switch to sway
+
+I am switching from bspwm to sway, mainly for the following reasons:
+1. Wayland is future-proof
+2. Support for different scaling factors per monitor
+
+This means that I have to switch to some other applications as well, 
+because it turns out many things depend on X.
+
+[-]: Configure sway akin to bspwm config
+[-]: Switch to alacritty (terminal emulator)
+[-]: Switch to wofi (application launcher)
+[-]: Switch from dunst to ? (notification daemon)
+[-]: Switch from sxhkd to ? (hotkey daemon)
+[-]: Switch from slock to ? (screen locker)
+
 # dotfiles
 
 This repo contains various configuration files. 
@@ -298,7 +314,7 @@ bspwm
 sxhkd
 xorg-xbacklight
 rofi
-nvim
+neovim
 xcape
 make
 pkg-config
