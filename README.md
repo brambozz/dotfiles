@@ -11,7 +11,7 @@ because it turns out many things depend on X.
 - [-]: Configure sway keybindings more ergonomically, i.e. minimal
 	sideways motion.
 - [-]: Configure swaylock
-- [-]: Make new shutdown prompt with wofi
+- [x]: Make new shutdown prompt
 - [x]: Fix firefox
 - [x]: Switch to alacritty (terminal emulator)
 - [-]: Configure alacritty keybindings
@@ -19,7 +19,7 @@ because it turns out many things depend on X.
 - [x]: Switch from dunst to mako (notification daemon)
 - [-]: Switch from okular to zathura (pdf reader)
 - [-]: Configure Qt application wayland support
-- [-]: Port non-wm keybindings from sxhkd to sway config
+- [x]: Port non-wm keybindings from sxhkd to sway config
 - [-]: Switch from slock to swaylock
 - [-]: Switch from flameshot to grim+slurp
 - [-]: Change look of sway
