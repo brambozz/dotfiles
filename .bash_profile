@@ -8,14 +8,13 @@
 export EDITOR=nvim
 export VISUAL=nvim
 export BROWSER=firefox
-export TERM=st
+export TERM=alacritty
 export PAGER=nvimpager
 export MANPAGER=nvimpager
 export XDG_CONFIG_HOME=$HOME/.config
-
-# Alias definitions
+export MOZ_ENABLE_WAYLAND=1
 
 # Leave this at the bottom to autostart X at login
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-	exec startx
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  exec sway
 fi
