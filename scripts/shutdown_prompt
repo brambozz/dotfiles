@@ -2,6 +2,9 @@
 
 # A simple shutdown prompt with a custom image
 
+# TODO: Fix autoselect in sway
+# TODO: Change feh to sway compatible image viewer
+
 # Display image with following options
 # (p)oweroff
 # (h)ibernate
@@ -10,7 +13,7 @@
 feh -F -Y ~/repositories/dotfiles/misc/shutdown_prompt.png &
 
 # Read a single character
-choice=$(echo -e "p\nh\ns\nr" | rofi -auto-select -dmenu)
+choice=$(echo -e "p\nh\ns\nr" | wofi --dmenu)
 
 # Execute the chosen option
 if [ $choice = 'p' ]

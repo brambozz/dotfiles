@@ -2,6 +2,8 @@
 # TODO: Ctrl+Alt+q to shutdown prompt
 # TODO: optimize ergonomics of shortcuts
 # TODO: remove title bars
+# TODO: screenshot shortcut
+# TODO: fix recursive notifications with mako
 
 # Launch notification daemon
 exec mako
@@ -31,8 +33,6 @@ input * xkb_model "pc105"
 
 ### System
 
-# TODO: shutdown prompt
-
 # Audio
 bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +5 \
 	&& notify-send -p -r 555 "Volume: $(pulsemixer --get-volume)"
@@ -61,6 +61,8 @@ floating_modifier $mod normal
 
 # Reload the configuration file
 bindsym Ctrl+Alt+r reload
+
+bindsym Ctrl+Alt+q exec shutdown_prompt
 
 # Exit sway (logs you out of your Wayland session)
 bindsym Ctrl+Alt+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
