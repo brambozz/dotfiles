@@ -16,9 +16,12 @@ because it turns out many things depend on X.
 - [x]: Switch to alacritty (terminal emulator)
 - [-]: Configure alacritty keybindings
 - [x]: Switch to wofi (application launcher)
-- [-]: Switch from dunst to ? (notification daemon)
-- [-]: Switch from sxhkd to ? (hotkey daemon)
-- [-]: Switch from slock to ? (screen locker)
+- [x]: Switch from dunst to mako (notification daemon)
+- [-]: Switch from okular to zathura (pdf reader)
+- [-]: Configure Qt application wayland support
+- [-]: Port non-wm keybindings from sxhkd to sway config
+- [-]: Switch from slock to swaylock
+- [-]: Switch from flameshot to grim+slurp
 - [-]: Change look of sway
 
 # dotfiles

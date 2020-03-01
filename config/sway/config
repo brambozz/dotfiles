@@ -4,6 +4,9 @@
 # TODO: optimize ergonomics of shortcuts
 # TODO: remove title bars
 
+# Launch notification daemon
+exec mako
+
 ## Variables
 set $mod Mod4
 set $left o
