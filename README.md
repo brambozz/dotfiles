@@ -8,8 +8,10 @@ This means that I have to switch to some other applications as well,
 because it turns out many things depend on X.
 
 - [x]: Configure sway keybindings akin to bspwm config
-- [x]: Configure sway keybindings more ergonomically, i.e. minimal
+- [-]: Configure sway keybindings more ergonomically, i.e. minimal
 	sideways motion.
+- [-]: Configure swaylock
+- [-]: Make new shutdown prompt with wofi
 - [x]: Fix firefox
 - [x]: Switch to alacritty (terminal emulator)
 - [-]: Configure alacritty keybindings
