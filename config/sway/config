@@ -1,15 +1,20 @@
+# TODO: automatic fibonacci splitting as I had in bspwm
+# TODO: Ctrl+Alt+q to shutdown prompt
+# TODO: backlight and sound controls
+# TODO: optimize ergonomics of shortcuts
+# TODO: remove title bars
+
 ## Variables
 set $mod Mod4
 set $left o
 set $down n
 set $up e
 set $right i
+
 # Applications
 set $term alacritty
 set $browser firefox
-
-# Application launcher
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $launcher wofi --show run
 
 ## Output configuration
 #
@@ -49,7 +54,6 @@ input * xkb_model "pc105"
 # Kill focused window
 bindsym $mod+h kill
 
-
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.
@@ -72,7 +76,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+m exec $browser
 
 # Launcher
-bindsym $mod+Space exec $menu
+bindsym $mod+Space exec $launcher
 
 ## Moving around
 
@@ -103,7 +107,6 @@ bindsym $mod+Alt+y move container to workspace 3
 bindsym $mod+Alt+semicolon move container to workspace 4
 
 ## Layout
-# TODO: automatic fibonacci splitting as I had in bspwm
 bindsym $mod+b splith
 bindsym $mod+v splitv
 

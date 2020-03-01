@@ -7,10 +7,13 @@ I am switching from bspwm to sway, mainly for the following reasons:
 This means that I have to switch to some other applications as well, 
 because it turns out many things depend on X.
 
-- [-]: Configure sway keybindings akin to bspwm config
-- [-]: Fix firefox
+- [x]: Configure sway keybindings akin to bspwm config
+- [x]: Configure sway keybindings more ergonomically, i.e. minimal
+	sideways motion.
+- [x]: Fix firefox
 - [x]: Switch to alacritty (terminal emulator)
-- [-]: Switch to wofi (application launcher)
+- [-]: Configure alacritty keybindings
+- [x]: Switch to wofi (application launcher)
 - [-]: Switch from dunst to ? (notification daemon)
 - [-]: Switch from sxhkd to ? (hotkey daemon)
 - [-]: Switch from slock to ? (screen locker)
