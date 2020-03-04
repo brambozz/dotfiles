@@ -275,10 +275,10 @@ cd yay
 makepkg -si
 ```
 
-# dunst
+# mako
 
-I use `dunst` as my notification daemon. It is started in `bspwmrc`.
-Make a symbolic link to `dunstrc` in `~/.config/dunst/dunstrc'.
+Notification daemon together with 
+[notify-send.py](https://github.com/phuhl/notify-send.py) is fire!
 
 # pulseaudio
 
