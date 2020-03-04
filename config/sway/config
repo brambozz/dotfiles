@@ -35,17 +35,17 @@ input * xkb_model "pc105"
 
 # Audio
 bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +5 \
-	&& notify-send -p -r 555 "Volume: $(pulsemixer --get-volume)"
+	&& notify-send.py "Volume: $(pulsemixer --get-volume)" --replaces-process "volume"
 bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -5 \
-	&& notify-send -p -r 555 "Volume: $(pulsemixer --get-volume)"
+	&& notify-send.py "Volume: $(pulsemixer --get-volume)" --replaces-process "volume"
 bindsym XF86AudioMute exec pulsemixer --toggle-mute \
-	&& notify-send -p -r 555 "nolume: $(pulsemixer --get-mute)"
+	&& notify-send.py "Volume: $(pulsemixer --get-mute)" --replaces-process "volume"
 
 # Backlight
 bindsym XF86MonBrightnessDown exec light -U 10 \
-	&& notify-send -p -r 666 "Backlight: $(light)"
+	&& notify-send.py "Backlight: $(light)" --replaces-process "backlight"
 bindsym XF86MonBrightnessUp exec light -A 10 \
-	&& notify-send -p -r 666 "Backlight: $(light)"
+	&& notify-send.py "Backlight: $(light)" --replaces-process "backlight"
 
 ### Basics
 
