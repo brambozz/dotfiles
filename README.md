@@ -24,7 +24,7 @@ because it turns out many things depend on X.
 - [-]: Switch from slock to swaylock
 - [-]: Switch from flameshot to grim+slurp
 - [-]: Change look of sway
-- [-]: Mako notifications on top of fullscreen
+- [x]: Mako notifications on top of fullscreen
 
 # dotfiles
 
