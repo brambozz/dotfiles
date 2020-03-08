@@ -63,6 +63,7 @@ floating_modifier $mod normal
 bindsym Ctrl+Alt+r reload
 
 bindsym Ctrl+Alt+q exec shutdown_prompt
+bindsym Ctrl+Alt+l exec swaylock
 
 # Exit sway (logs you out of your Wayland session)
 bindsym Ctrl+Alt+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'

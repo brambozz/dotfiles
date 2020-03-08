@@ -7,24 +7,28 @@ I am switching from bspwm to sway, mainly for the following reasons:
 This means that I have to switch to some other applications as well, 
 because it turns out many things depend on X.
 
-- [x]: Configure sway keybindings akin to bspwm config
+## Usability
 - [-]: Configure sway keybindings more ergonomically, i.e. minimal
 	sideways motion.
-- [-]: Configure swaylock
+- [-]: sway fibonacci scheme
+- [-]: Configure alacritty keybindings
+- [-]: Switch to kitty? (terminal emulator)
+- [-]: Switch from okular to zathura (pdf reader)
+- [-]: Switch from flameshot to grim+slurp
+- [x]: Configure sway keybindings akin to bspwm config
 - [x]: Make new shutdown prompt
 - [x]: Fix firefox
 - [x]: Switch to alacritty (terminal emulator)
-- [-]: Configure alacritty keybindings
-- [-]: Switch to kitty? (terminal emulator)
 - [x]: Switch to wofi (application launcher)
 - [x]: Switch from dunst to mako (notification daemon)
-- [-]: Switch from okular to zathura (pdf reader)
 - [x]: Configure Qt application wayland support
 - [x]: Port non-wm keybindings from sxhkd to sway config
-- [-]: Switch from slock to swaylock
-- [-]: Switch from flameshot to grim+slurp
-- [-]: Change look of sway
+- [x]: Switch from slock to swaylock
 - [x]: Mako notifications on top of fullscreen
+
+## Prettify
+- [-]: Configure swaylock background image (could be screenshot, pipes?)
+- [-]: Change look of sway
 
 # dotfiles
 
