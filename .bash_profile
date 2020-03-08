@@ -13,6 +13,7 @@ export PAGER=nvimpager
 export MANPAGER=nvimpager
 export XDG_CONFIG_HOME=$HOME/.config
 export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland-egl
 
 # Leave this at the bottom to autostart X at login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then

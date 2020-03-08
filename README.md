@@ -15,14 +15,16 @@ because it turns out many things depend on X.
 - [x]: Fix firefox
 - [x]: Switch to alacritty (terminal emulator)
 - [-]: Configure alacritty keybindings
+- [-]: Switch to kitty? (terminal emulator)
 - [x]: Switch to wofi (application launcher)
 - [x]: Switch from dunst to mako (notification daemon)
 - [-]: Switch from okular to zathura (pdf reader)
-- [-]: Configure Qt application wayland support
+- [x]: Configure Qt application wayland support
 - [x]: Port non-wm keybindings from sxhkd to sway config
 - [-]: Switch from slock to swaylock
 - [-]: Switch from flameshot to grim+slurp
 - [-]: Change look of sway
+- [-]: Mako notifications on top of fullscreen
 
 # dotfiles
 
