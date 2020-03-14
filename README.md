@@ -11,13 +11,12 @@ because it turns out many things depend on X.
 - [-]: Configure sway keybindings more ergonomically, i.e. minimal
 	sideways motion.
 - [-]: sway fibonacci scheme
-- [-]: Configure alacritty keybindings
-- [-]: Switch to kitty? (terminal emulator)
 - [-]: Switch from okular to zathura (pdf reader)
 - [-]: Switch from flameshot to grim+slurp
-- [-]: Battery indicator notification
 - [-]: Check that low battery notification works from cron
 - [-]: Set ligature font for Kitty
+- [x]: Battery indicator notification
+- [x]: Switch to kitty (terminal emulator)
 - [x]: Configure sway keybindings akin to bspwm config
 - [x]: Make new shutdown prompt
 - [x]: Fix firefox
