@@ -15,6 +15,9 @@ because it turns out many things depend on X.
 - [-]: Switch to kitty? (terminal emulator)
 - [-]: Switch from okular to zathura (pdf reader)
 - [-]: Switch from flameshot to grim+slurp
+- [-]: Battery indicator notification
+- [-]: Check that low battery notification works from cron
+- [-]: Set ligature font for Kitty
 - [x]: Configure sway keybindings akin to bspwm config
 - [x]: Make new shutdown prompt
 - [x]: Fix firefox
@@ -29,6 +32,7 @@ because it turns out many things depend on X.
 ## Prettify
 - [-]: Configure swaylock background image (could be screenshot, pipes?)
 - [-]: Change look of sway
+- [-]: Remove titlebars of windows in sway
 
 # dotfiles
 

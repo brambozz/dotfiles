@@ -1,10 +1,3 @@
-# TODO: automatic fibonacci splitting as I had in bspwm
-# TODO: Ctrl+Alt+q to shutdown prompt
-# TODO: optimize ergonomics of shortcuts
-# TODO: remove title bars
-# TODO: screenshot shortcut
-# TODO: fix recursive notifications with mako
-
 # Launch notification daemon
 exec mako
 
@@ -46,6 +39,9 @@ bindsym XF86MonBrightnessDown exec light -U 10 \
 	&& notify-send.py "Backlight: $(light)" --replaces-process "backlight"
 bindsym XF86MonBrightnessUp exec light -A 10 \
 	&& notify-send.py "Backlight: $(light)" --replaces-process "backlight"
+
+# battery_time
+bindsym $mod+t exec battery_time
 
 ### Basics
 
