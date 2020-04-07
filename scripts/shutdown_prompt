@@ -11,4 +11,4 @@ imv -c "bind p exec systemctl poweroff;quit" \
     -c "bind h exec systemctl hibernate;quit" \
     -c "bind s exec systemctl suspend;quit" \
     -c "bind r exec systemctl reboot;quit" \
-    -f ~/repositories/dotfiles/misc/shutdown_prompt.png
+    -f ~/repos/dotfiles/misc/shutdown_prompt.png
