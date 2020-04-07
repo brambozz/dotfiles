@@ -13,8 +13,9 @@ because it turns out many things depend on X.
 - [-]: sway fibonacci scheme
 - [-]: Switch from okular to zathura (pdf reader)
 - [-]: Switch from flameshot to grim+slurp
-- [-]: Check that low battery notification works from cron
 - [-]: Set ligature font for Kitty
+- [x]: Hostname dependent config file
+- [x]: Check that low battery notification works from cron
 - [x]: Battery indicator notification
 - [x]: Switch to kitty (terminal emulator)
 - [x]: Configure sway keybindings akin to bspwm config
