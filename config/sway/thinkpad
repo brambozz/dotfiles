@@ -1,0 +1,3 @@
+# Custom sway config for thinkpad
+
+include ./config

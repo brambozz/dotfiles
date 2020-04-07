@@ -17,5 +17,7 @@ export QT_QPA_PLATFORM=wayland-egl
 
 # Leave this at the bottom to autostart X at login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-  exec sway
+	if [ $HOSTNAME = bramthinkpad ]; then
+		exec sway -c ~/.config/sway/thinkpad
+	fi
 fi
