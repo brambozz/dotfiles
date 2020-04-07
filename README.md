@@ -13,7 +13,8 @@ because it turns out many things depend on X.
 - [ ] sway fibonacci scheme
 - [ ] Switch from okular to zathura (pdf reader)
 - [ ] Switch from flameshot to grim+slurp
-- [ ] Set ligature font for Kitty
+- [ ] Install wl-clipboard
+- [x] Set ligature font for Kitty -> Fira Code
 - [x] Hostname dependent config file
 - [x] Check that low battery notification works from cron
 - [x] Battery indicator notification
