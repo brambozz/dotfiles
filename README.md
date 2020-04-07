@@ -8,12 +8,12 @@ This means that I have to switch to some other applications as well,
 because it turns out many things depend on X.
 
 ## Usability
-- [-] Configure sway keybindings more ergonomically, i.e. minimal
+- [ ] Configure sway keybindings more ergonomically, i.e. minimal
 	sideways motion.
-- [-] sway fibonacci scheme
-- [-] Switch from okular to zathura (pdf reader)
-- [-] Switch from flameshot to grim+slurp
-- [-] Set ligature font for Kitty
+- [ ] sway fibonacci scheme
+- [ ] Switch from okular to zathura (pdf reader)
+- [ ] Switch from flameshot to grim+slurp
+- [ ] Set ligature font for Kitty
 - [x] Hostname dependent config file
 - [x] Check that low battery notification works from cron
 - [x] Battery indicator notification
@@ -30,9 +30,9 @@ because it turns out many things depend on X.
 - [x] Mako notifications on top of fullscreen
 
 ## Prettify
-- [-] Configure swaylock background image (could be screenshot, pipes?)
-- [-] Change look of sway
-- [-] Remove titlebars of windows in sway
+- [ ] Configure swaylock background image (could be screenshot, pipes?)
+- [ ] Change look of sway
+- [ ] Remove titlebars of windows in sway
 
 # dotfiles
 
