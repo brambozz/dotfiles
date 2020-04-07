@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Note: dotfiles repository location must be ~/repos/dotfiles
+
+# Symlinks to .config
+ln -s -f ~/repos/dotfiles/config/fontconfig/fonts.conf ~/.config/fontconfig
+
+ln -s -f ~/repos/dotfiles/config/mako/config ~/.config/mako
+
+ln -s -f ~/repos/dotfiles/config/neomutt/neomuttrc ~/.config/neomutt
+ln -s -f ~/repos/dotfiles/config/neomutt/user ~/.config/neomutt
+ln -s -f ~/repos/dotfiles/config/neomutt/accounts/live ~/.config/neomutt/accounts
+ln -s -f ~/repos/dotfiles/config/neomutt/accounts/outlook ~/.config/neomutt/accounts
+
+ln -s -f ~/repos/dotfiles/config/nvim/init.vim ~/.config/nvim
+# TODO: nvim colors when working
+
+ln -s -f ~/repos/dotfiles/config/nvimpager/init.vim ~/.config/nvimpager
+
+ln -s -f ~/repos/dotfiles/config/offlineimap/config ~/.config/offlineimap
+
+ln -s -f ~/repos/dotfiles/config/sway/config ~/.config/sway
+ln -s -f ~/repos/dotfiles/config/sway/thinkpad ~/.config/sway
+
+ln -s -f ~/repos/dotfiles/config/mimeapps.list ~/.config
+
+# Symlinks to /usr/local/bin
+sudo ln -s -f ~/repos/dotfiles/scripts/battery_cap_check /usr/local/bin
+sudo ln -s -f ~/repos/dotfiles/scripts/battery_time /usr/local/bin
+sudo ln -s -f ~/repos/dotfiles/scripts/colorpanes /usr/local/bin
+sudo ln -s -f ~/repos/dotfiles/scripts/shutdown_prompt /usr/local/bin
+sudo ln -s -f ~/repos/dotfiles/scripts/update_colors /usr/local/bin
