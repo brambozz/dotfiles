@@ -1,6 +1,9 @@
 # Launch notification daemon
 exec mako
 
+# Autotiling
+exec autotiling
+
 ## Variables
 set $mod Mod4
 set $left o
@@ -14,7 +17,7 @@ set $launcher wofi --show run
 ## Output configuration
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/bram/documents/wallpapers/fiat5barkie.png fill
 
 ## Input configuration
 input * xkb_layout "us,us"

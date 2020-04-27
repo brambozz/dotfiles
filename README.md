@@ -10,10 +10,11 @@ because it turns out many things depend on X.
 ## Usability
 - [ ] Configure sway keybindings more ergonomically, i.e. minimal
 	sideways motion.
-- [ ] sway fibonacci scheme
 - [ ] Switch from okular to zathura (pdf reader)
 - [ ] Switch from flameshot to grim+slurp
 - [ ] Install wl-clipboard
+- [ ] Install [wlr-redshift](https://github.com/minus7/redshift/tree/wayland)
+- [x] sway autotiling 
 - [x] Set ligature font for Kitty -> Fira Code
 - [x] Hostname dependent config file
 - [x] Check that low battery notification works from cron
