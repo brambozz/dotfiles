@@ -40,3 +40,8 @@ call plug#end()
 
 " Disable automatic folding
 :set nofoldenable
+
+" Color settings
+:syntax enable
+:set termguicolors
+:colorscheme base16
