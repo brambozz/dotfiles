@@ -1,5 +1,3 @@
-" vimrc file Bram de Wilde, see GitHub for changelog 
-"--------------------------------------------------
 " This file assumes the keyboard layout is Colemak
 
 " Remap movement keys
@@ -29,7 +27,7 @@
 " Display line numbers
 :set number
 
-" Nice colored column 72 to keep everything nicely readabe
+" Nice colored column 72 to keep everything readable
 :set colorcolumn=72
 
 :let g:tex_flavor = 'latex'
@@ -42,13 +40,3 @@ call plug#end()
 
 " Disable automatic folding
 :set nofoldenable
-
-
-"let g:deoplete#enable_at_startup = 1
-
-" Set latex completion
-"call deoplete#custom#var('omni', 'input_patterns', {
-"	\ 'tex': g:vimtex#re#deoplete
-"	\})
-"let g:vimtex_complete_close_braces = 1
-
