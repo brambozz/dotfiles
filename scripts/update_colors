@@ -6,33 +6,23 @@
 
 # Change working directory and save current
 startwd=$PWD
-cd ~/repositories/dotfiles
+cd ~/repos/dotfiles
 
 # List available colorschemes
 echo "Available colorschemes"
 echo "----------------------"
-ls ~/repositories/dotfiles/schemes/**/*.yaml | xargs -n1 basename
+ls ~/repos/dotfiles/schemes/**/*.yaml | xargs -n1 basename
 echo "----------------------"
 
 # Prompt user for colorschemes
 read -p 'Which scheme? (do not include .yaml): ' scheme
 
 # Get filepath for chosen scheme
-# scheme=$(ls ~/repositories/dotfiles/schemes/**/*.yaml | grep $scheme)
+# scheme=$(ls ~/repos/dotfiles/schemes/**/*.yaml | grep $scheme)
 
 # Inject scheme into config files
-echo "Injecting colorschemes"
-pybase16 inject -s $scheme -f ~/repositories/st/config.h
-pybase16 inject -s $scheme -f ~/repositories/dotfiles/config/bspwm/bspwmrc
-pybase16 inject -s $scheme -f ~/repositories/dotfiles/config/nvim/colors/base16.vim
-
-# Build binaries
-echo "Building binaries"
-echo "Building st"
-cd ~/repositories/st
-make clean
-make
-sudo make install
+echo "Injecting colorscheme"
+pybase16 inject -s $scheme -f ~/repos/dotfiles/config/nvim/colors/base16.vim
 
 # Final message
 echo "Updated colorscheme"
