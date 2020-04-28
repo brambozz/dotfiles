@@ -1,0 +1,30 @@
+# Keyboard mapping
+
+# Move around
+map n scroll down
+map e scroll up
+map i scroll right
+map o scroll left
+
+# Scroll more
+map <C-n> scroll half-down
+map <C-e> scroll half-up
+
+# Zoom
+map t zoom in
+map s zoom out
+map r zoom best-fit
+
+# Other settings
+
+set recolor true
+
+# Color scheme
+# %%base16_template: zathura##default %%
+set recolor-darkcolor "#e9e9f4"
+set recolor-lightcolor "#282936"
+set default-bg "#282936"
+
+# TODO: set status bar color
+
+# %%base16_template_end%%

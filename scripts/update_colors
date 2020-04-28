@@ -22,7 +22,7 @@ read -p 'Which scheme? (do not include .yaml): ' scheme
 
 # Inject scheme into config files
 echo "Injecting colorscheme"
-pybase16 inject -s $scheme -f ~/repos/dotfiles/config/nvim/colors/base16.vim
+pybase16 inject -s $scheme -f ~/repos/dotfiles/config/nvim/colors/base16.vim -f ~/repos/dotfiles/config/kitty/kitty.conf -f ~/repos/dotfiles/config/zathura/zathurarc
 
 # Final message
 echo "Updated colorscheme"
