@@ -16,14 +16,21 @@ set $launcher wofi --show run
 
 ## Output configuration
 
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# Wallpaper
 output * bg /home/bram/documents/wallpapers/fiat5barkie.png fill
 
 ## Input configuration
+
+## Keyboard
 input * xkb_layout "us,us"
 input * xkb_variant "colemak,basic"
 input * xkb_options "grp:alt_shift_toggle,caps:hyper"
 input * xkb_model "pc105"
+
+## Override for keebio levinson
+input 51984:4422:Keebio_Levinson xkb_layout "us"
+input 51984:4422:Keebio_Levinson xkb_variant "basic"
+input 51984:4422:Keebio_Levinson xkb_options ""
 
 ## Key bindings
 
