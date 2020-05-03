@@ -35,6 +35,9 @@ input 51984:4422:Keebio_Levinson xkb_options ""
 
 ### System
 
+# Printscreen
+bindsym Print exec grim -g "$(slurp)"
+
 # Audio
 bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +5 \
 	&& notify-send.py "Volume: $(pulsemixer --get-volume)" --replaces-process "volume"

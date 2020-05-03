@@ -14,6 +14,7 @@ export MANPAGER=nvimpager
 export XDG_CONFIG_HOME=$HOME/.config
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland-egl
+export GRIM_DEFAULT_DIR=$HOME/screenshots
 
 # Leave this at the bottom to autostart X at login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then

@@ -8,11 +8,9 @@ This means that I have to switch to some other applications as well,
 because it turns out many things depend on X.
 
 ## Usability
-- [ ] Configure sway keybindings more ergonomically, i.e. minimal
-	sideways motion.
-- [ ] Switch from flameshot to grim+slurp
-- [ ] Install wl-clipboard
-- [ ] Install [wlr-redshift](https://github.com/minus7/redshift/tree/wayland)
+- [x] Switch from flameshot to grim+slurp
+- [x] Install wl-clipboard
+- [x] Install [wlr-redshift](https://github.com/minus7/redshift/tree/wayland)
 - [x] Switch from okular to zathura (pdf reader)
 - [x] sway autotiling 
 - [x] Set ligature font for Kitty -> Fira Code
@@ -32,6 +30,8 @@ because it turns out many things depend on X.
 - [x] Mako notifications on top of fullscreen
 
 ## Prettify
+- [ ] Configure sway keybindings more ergonomically, i.e. minimal
+	sideways motion.
 - [ ] Configure swaylock background image (could be screenshot, pipes?)
 - [ ] Change look of sway
 - [ ] Remove titlebars of windows in sway
