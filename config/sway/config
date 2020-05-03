@@ -1,8 +1,7 @@
-# Launch notification daemon
+# Launch programs
 exec mako
-
-# Autotiling
 exec autotiling
+exec redshift
 
 ## Variables
 set $mod Mod4
@@ -113,10 +112,6 @@ bindsym $mod+Alt+u move container to workspace 2
 bindsym $mod+Alt+y move container to workspace 3
 bindsym $mod+Alt+semicolon move container to workspace 4
 
-## Layout
-bindsym $mod+b splith
-bindsym $mod+v splitv
-
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -132,9 +127,6 @@ bindsym $mod+Alt+space floating toggle
 # TODO: find a different binding for this
 #bindsym $mod+space focus mode_toggle
 
-# Move focus to the parent container
-bindsym $mod+a focus parent
-
 ## Scratchpad
 # TODO: is this useful?
 # Sway has a "scratchpad", which is a bag of holding for windows.
@@ -148,6 +140,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 ## Resize
+bindsym $mod+r mode "resize"
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -161,7 +154,6 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
 }
-bindsym $mod+r mode "resize"
 
 #
 # Status Bar:
