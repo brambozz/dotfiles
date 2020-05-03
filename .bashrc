@@ -15,8 +15,7 @@ alias wc='nmcli d wifi c'  # wc for wifi connect
 alias m='offlineimap; neomutt'  # m for mail
 alias c='khal calendar'  # c for calendar
 alias cn='khal new'  # cn for calendar new
-alias fin='cd ~/repositories/finesse'
-alias api='cd ~/repositories/finesse/finesse/api'
+alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/brambozz'
 
 # Git aliases
 alias gst='git status'
