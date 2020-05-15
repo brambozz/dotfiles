@@ -1,4 +1,5 @@
 # Switch to sway
+test
 
 I am switching from bspwm to sway, mainly for the following reasons:
 1. Wayland is future-proof
