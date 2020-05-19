@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# This script deploys a colorscheme in all my dotfiles and rebuilds
+# any compiled binaries. This uses pybase16, a python builder for
+# base16 colorschemes.
+
+# Change working directory and save current
+startwd=$PWD
+cd ~/repos/dotfiles
+
+# List available colorschemes
+echo "Available colorschemes"
+echo "----------------------"
+ls ~/repos/dotfiles/schemes/**/*.yaml | xargs -n1 basename
+echo "----------------------"
+
+# Prompt user for colorschemes
+read -p 'Which scheme? (do not include .yaml): ' scheme
+
+# Get filepath for chosen scheme
+# scheme=$(ls ~/repos/dotfiles/schemes/**/*.yaml | grep $scheme)
+
+# Inject scheme into config files
+echo "Injecting colorscheme"
+pybase16 inject -s $scheme -f ~/repos/dotfiles/config/nvim/colors/base16.vim -f ~/repos/dotfiles/config/kitty/kitty.conf -f ~/repos/dotfiles/config/zathura/zathurarc
+
+# Final message
+echo "Updated colorscheme"

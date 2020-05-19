@@ -16,6 +16,7 @@ alias m='offlineimap; neomutt'  # m for mail
 alias c='khal calendar'  # c for calendar
 alias cn='khal new'  # cn for calendar new
 alias pom='nohup breaktime 25 &'  # work for one pomodoro (25 min)
+alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/brambozz'
 
 # Taskwarrior
 alias t_lastweeks='task end.after:today-2wk completed'
@@ -74,6 +75,18 @@ sf()
 print_umcn()
 {
 	smbclient //umcrps01prd/Print -U z955156 -W umcn -c "print $1"
+}
+
+# scan function
+scan()
+{
+	# First argument is output file
+
+	# Scan document
+	scanimage --device "pixma:04A91734_D5FC46" --format=png > /tmp/scan.png
+
+	# Convert to pdf
+	convert /tmp/scan.png $1
 }
 
 PS1='[\u@\h \W]\$ '

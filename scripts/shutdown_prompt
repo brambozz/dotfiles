@@ -7,25 +7,8 @@
 # (h)ibernate
 # (s)uspend
 # (r)eboot
-feh -F -Y ~/repositories/dotfiles/misc/shutdown_prompt.png &
-
-# Read a single character
-choice=$(echo -e "p\nh\ns\nr" | rofi -auto-select -dmenu)
-
-# Execute the chosen option
-if [ $choice = 'p' ]
-then
-	systemctl poweroff
-fi
-if [ $choice = 'h' ]
-then
-	systemctl hibernate
-fi
-if [ $choice = 's' ]
-then
-	systemctl suspend
-fi
-if [ $choice = 'r' ]
-then
-	systemctl reboot
-fi
+imv -c "bind p exec systemctl poweroff;quit" \
+    -c "bind h exec systemctl hibernate;quit" \
+    -c "bind s exec systemctl suspend;quit" \
+    -c "bind r exec systemctl reboot;quit" \
+    -f ~/repos/dotfiles/misc/shutdown_prompt.png

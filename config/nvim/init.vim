@@ -1,5 +1,3 @@
-" vimrc file Bram de Wilde, see GitHub for changelog 
-"--------------------------------------------------
 " This file assumes the keyboard layout is Colemak
 
 " Remap movement keys
@@ -29,7 +27,7 @@
 " Display line numbers
 :set number
 
-" Nice colored column 72 to keep everything nicely readabe
+" Nice colored column 72 to keep everything readable
 :set colorcolumn=72
 
 :let g:tex_flavor = 'latex'
@@ -66,3 +64,7 @@ let g:limelight_conceal_ctermfg = 'gray'
 "	\})
 "let g:vimtex_complete_close_braces = 1
 
+" Color settings
+:syntax enable
+:set termguicolors
+:colorscheme base16

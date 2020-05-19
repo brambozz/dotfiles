@@ -1,9 +1,0 @@
-set folder = 'imaps://imap-mail.outlook.com:993'
-set imap_user = 'brambo5@live.nl'
-set imap_pass = 'Ditraadtjenooit1!live'
-set smtp_url = 'smtp://brambo5@live.nl@smtp-mail.outlook.com:587'
-set smtp_pass = 'Ditraadtjenooit1!live'
-set from = 'Bram de Wilde test <brambo5@live.nl>'
-set realname = 'Bram de Wilde test'
-set ssl_force_tls = yes
-set spoolfile = '+INBOX'

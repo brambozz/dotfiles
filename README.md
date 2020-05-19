@@ -1,3 +1,63 @@
+# Switch to sway
+test
+
+I am switching from bspwm to sway, mainly for the following reasons:
+1. Wayland is future-proof
+2. Support for different scaling factors per monitor
+
+This means that I have to switch to some other applications as well, 
+because it turns out many things depend on X.
+
+## Essential packages
+
+This is a list of packages that should result in a working sway config.
+
+```
+sway
+xorg-server-xwayland
+firefox
+kitty
+wofi
+mako
+grim
+slurp
+light
+pulsemixer
+base-devel
+autotiling (aur)
+redshift-wlr-gamma-control-git (aur)
+[notify-send.py](https://github.com/phuhl/notify-send.py) (pip)
+```
+
+## Usability
+- [x] Switch from flameshot to grim+slurp
+- [x] Install wl-clipboard
+- [x] Install [wlr-redshift](https://github.com/minus7/redshift/tree/wayland)
+- [x] Switch from okular to zathura (pdf reader)
+- [x] sway autotiling 
+- [x] Set ligature font for Kitty -> Fira Code
+- [x] Hostname dependent config file
+- [x] Check that low battery notification works from cron
+- [x] Battery indicator notification
+- [x] Switch to kitty (terminal emulator)
+- [x] Configure sway keybindings akin to bspwm config
+- [x] Make new shutdown prompt
+- [x] Fix firefox
+- [x] Switch to alacritty (terminal emulator)
+- [x] Switch to wofi (application launcher)
+- [x] Switch from dunst to mako (notification daemon)
+- [x] Configure Qt application wayland support
+- [x] Port non-wm keybindings from sxhkd to sway config
+- [x] Switch from slock to swaylock
+- [x] Mako notifications on top of fullscreen
+
+## Prettify
+- [ ] Configure sway keybindings more ergonomically, i.e. minimal
+	sideways motion.
+- [ ] Configure swaylock background image (could be screenshot, pipes?)
+- [ ] Change look of sway
+- [ ] Remove titlebars of windows in sway
+
 # dotfiles
 
 This repo contains various configuration files. 
@@ -249,10 +309,10 @@ cd yay
 makepkg -si
 ```
 
-# dunst
+# mako
 
-I use `dunst` as my notification daemon. It is started in `bspwmrc`.
-Make a symbolic link to `dunstrc` in `~/.config/dunst/dunstrc'.
+Notification daemon together with 
+[notify-send.py](https://github.com/phuhl/notify-send.py) is fire!
 
 # pulseaudio
 
@@ -298,7 +358,7 @@ bspwm
 sxhkd
 xorg-xbacklight
 rofi
-nvim
+neovim
 xcape
 make
 pkg-config
