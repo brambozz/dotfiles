@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Argument is minutes until breaktime
+sleep $1m
+
+notify-send "Breaktime!"

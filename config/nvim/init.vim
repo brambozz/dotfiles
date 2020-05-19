@@ -37,12 +37,26 @@
 " Plugin manager: vim-plug
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'lervag/vimtex'
+Plug 'andymass/vim-matchup'
 Plug 'psf/black'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 call plug#end()
+
+" Execute Black at write on .py files
+autocmd BufWritePre *.py execute ':Black' 
 
 " Disable automatic folding
 :set nofoldenable
 
+" Us matchup in vimtex 
+let g:matchup_override_vimtex = 1
+
+" This makes visual mode selection left/right more responsive
+:set timeoutlen=100 
+
+" Limelight color config
+let g:limelight_conceal_ctermfg = 'gray'
 
 "let g:deoplete#enable_at_startup = 1
 
