@@ -22,6 +22,6 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	if [ $HOSTNAME = bramthinkpad ]; then
 		exec sway -c ~/.config/sway/thinkpad
 	else
-		exec sway -c ~/.config/sway/config
+		exec sway -c ~/.config/sway/goat
 	fi
 fi
