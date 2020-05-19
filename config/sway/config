@@ -1,3 +1,6 @@
+# General sway config, loaded from specific configs 'thinkpad' and 
+# 'goat'
+
 # Launch programs
 exec mako
 exec autotiling
@@ -12,11 +15,6 @@ set $right i
 set $term kitty
 set $browser firefox
 set $launcher wofi --show run
-
-## Output configuration
-
-# Wallpaper
-output * bg /home/bram/documents/wallpapers/fiat5barkie.png fill
 
 ## Input configuration
 
