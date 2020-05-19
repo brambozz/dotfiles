@@ -1,5 +1,4 @@
 # Switch to sway
-test
 
 I am switching from bspwm to sway, mainly for the following reasons:
 1. Wayland is future-proof
@@ -14,6 +13,7 @@ This is a list of packages that should result in a working sway config.
 
 ```
 sway
+swaylock
 xorg-server-xwayland
 firefox
 kitty
@@ -106,12 +106,6 @@ Might even consider 60% if I only travel in the train.
 
 Also enable the service, such that it starts at boot.
 
-## Xorg/xinit
-
-Follow the instructions on the 
-[Arch wiki](https://wiki.archlinux.org/index.php/Xorg).
-Also those regarding [xinit](https://wiki.archlinux.org/index.php/Xinit).
-
 ## Hibernation
 
 Do the following things to enable hibernation.
@@ -121,25 +115,6 @@ boot image with `sudo mkinitcpio -p linux`.
 
 Since I use systemd-boot, I also had to add `resume=/dev/sda3` to options
 under `/boot/loader/entries/arch.conf`.
-
-## bspwm
-
-The last important step is to configure bspwm.
-I followed the instructions on the 
-[Arch wiki](https://wiki.archlinux.org/index.php/Bspwm).
-What I do additionally is make symbolic links to bspwmrc and 
-sxhkdrc in my dotfiles repo.
-
-## Environment variables
-I set my environment variables in ~/.bash_profile
-
-## Additional installed packages
-`light` for brightness control in sxhkd
-
-## st
-
-I use [st](https://st.suckless.org/) as my terminal emulator and have
-my own fork [here](https://github.org/brambozz/st/).
 
 ## neovim
 I have chosen to use [neovim](https://neovim.io/) as my default 
@@ -225,59 +200,6 @@ git config --global core.pager nvimpager
 ```
 And symlink `nvimpager/init.vim` to `~/.config/nvimpager/init.vim`.
 
-# Basic keyboard setup
-
-I chose to remap CapsLock, which is BackSpace on colemak, 
-to the Hyper_L key. 
-I might want to use this to remap {n, e, i, o} to 
-{Down, Up, Right, Left}.
-At the moment I am leaving this for some other time, 
-as I want to route everything through sxhkd.
-Pressing Alt+Shift will toggle between colemak and qwerty.
-Additionally I use the following command with 
-[xcape](https://github.com/alols/xcape) to still use it as a 
-backspace on a single tap.
-
-```
-xcape -e 'Hyper_L=BackSpace'
-```
-
-To make these changes happen automatically on boot:
-1. edit ~/.xinitrc
-2. Add the following lines at the end
-
-```
-setxkbmap -model pc105 -layout us,us -variant colemak,basic -option grp:alt_shift_toggle, caps:hyper &
-xcape -e 'Hyper_L=BackSpace' &
-```
-
-# sxhkd
-
-For defining hotkeys I went with the simple 
-[sxhkd](https://github.com/baskerville/sxhkd). 
-I wish to make the BackSpace (i.e. Caps lock, since I use colemak) a 
-sort of default modifier key, because it is far better reachable than 
-alt, super etc.
-The only mapping currently is BackSpace + {n, e, i, o} = 
-{Down, Up, Right, Left}. 
-This maps vim keys to the arrow key, such that is globally available.
-
-# slock
-
-To lock my screen, I would like to make a setup similar to 
-[this post](https://www.reddit.com/r/unixporn/comments/9i5jev/slockbspwm_pretty_diy_screensaver_feat_suckless/). 
-However, I would like it a bit more portable, 
-since this is taylored towards bspwm. 
-Also inspired by [this](http://plankenau.com/blog/post/gaussianlock).
-Idea:
-
-1. Make screenshot with either maim or scrot
-2. Blur the screenshot
-3. Display image (with feh or imagemagick)
-4. (opt) overlay png, for example broken screen or some fancy text
-5. slock (with unlock patch)
-6. close image (deletion is automatic on reboot if image is placed in /tmp)
-
 # cron
 
 In the scripts directory there are a couple of scripts that I set up
@@ -332,7 +254,6 @@ Then update any templates or schemes through
 In the scripts directory there are a number of scripts. 
 I make symbolic links to all of them in /usr/local/bin.
 
-
 # Desired software list
 
 This is a list with things I want to switch to at some point.
@@ -343,49 +264,6 @@ This is a list with things I want to switch to at some point.
 - btpd (bittorrent client)
 - DASH (shell)
 - Mutt (email client)
-
-# Package list
-This is a list of all packages to install after a fresh Arch install.
-
-```
-sudo
-tlp
-tp_smapi
-acpi_call
-git
-xorg-xinit
-bspwm
-sxhkd
-xorg-xbacklight
-rofi
-neovim
-xcape
-make
-pkg-config
-gcc
-tcc
-dunst
-fakeroot
-patch
-cronie
-task
-pandoc
-pulseaudio
-xorg-xrandr
-python-pip
-networkmanager
-wpa_supplicant
-wireless_tools
-gnome-keyring
-libnotify-id (aur)
-```
-
-And from personal forks
-```
-nnn
-slock
-st
-```
 
 [1]: https://www.reddit.com/r/vim/comments/pu71n/remap_hjkl_to_jkl_anyone/
 [2]: https://www.reddit.com/r/vim/comments/1lz25q/why_hjkl_for_navigation_not_jkl/
