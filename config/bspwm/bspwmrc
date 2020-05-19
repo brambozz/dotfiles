@@ -1,6 +1,8 @@
 #!/bin/sh
 
-bspc monitor -d 1 2 3 4 5 6 7 8 lock
+#bspc monitor -d 1 2 3 4 5 6 7 8 lock
+bspc monitor eDP-1 -d 1 2 3 4 lock
+#bspc monitor DP-1 -d 3 4
 
 bspc config border_width         4
 bspc config window_gap         	 6 
@@ -19,3 +21,4 @@ bspc config gapless_monocle      true
 
 sxhkd &
 dunst &
+udiskie &
