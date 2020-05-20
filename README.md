@@ -14,6 +14,7 @@ This is a list of packages that should result in a working sway config.
 ```
 sway
 swaylock
+qt5-wayland
 xorg-server-xwayland
 firefox
 kitty
