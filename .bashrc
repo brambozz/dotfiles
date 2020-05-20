@@ -32,6 +32,7 @@ alias diagzoom='xdg-open "zoommtg://zoom.us/join?action=join&confno=3073085428"'
 alias ddhzoom='xdg-open "zoommtg://zoom.us/join?action=join&confno=95852053140"'
 alias vileplume='sshfs datateam@vileplume:/ ~/shares/vileplume'
 alias copyzoom='echo https://zoom.us/j/7278645668 | xclip -selection c'
+alias zoom='env -u QT_QPA_PLATFORM /usr/bin/zoom'
 
 ## Cluster
 alias runint_high='ssh dlc-arbok -l diag ./c-submit --priority=high --interactive --require-mem=40g --require-cpus=4 --gpu-count=1 bramdewilde 8894 4 doduo1.umcn.nl/bramdw/interactive:latest'

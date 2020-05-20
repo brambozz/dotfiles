@@ -14,6 +14,7 @@ This is a list of packages that should result in a working sway config.
 ```
 sway
 swaylock
+qt5-wayland
 xorg-server-xwayland
 firefox
 kitty
@@ -24,6 +25,7 @@ slurp
 light
 pulsemixer
 base-devel
+imv
 autotiling (aur)
 redshift-wlr-gamma-control-git (aur)
 [notify-send.py](https://github.com/phuhl/notify-send.py) (pip)
