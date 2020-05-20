@@ -156,4 +156,11 @@ mode "resize" {
     bindsym Return mode "default"
 }
 
+## Style
+
+default_border pixel 2
+gaps inner 10
+gaps outer -8
+smart_gaps on
+
 include /etc/sway/config.d/*
