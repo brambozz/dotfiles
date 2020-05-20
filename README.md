@@ -125,8 +125,7 @@ An interesting article that helped choosing between vim and neovim can
 be found 
 [here](https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/).
 As I am learning vim, I will update my choices for keyboard remapping 
-below. 
-Since I use colemak, keys may not always remain logical. 
+below.  Since I use colemak, keys may not always remain logical. 
 I will strive for ergonomics, but focus on learning to use vim first. 
 However, since I plan on switching to more vim-like applications 
 (e.g. terminal file manager, qutebrowser) the movement keys are 
@@ -136,19 +135,9 @@ See [here](https://neovim.io/doc/user/starting.html#vimrc) for where
 
 #### Plugins
 
-I used [dein](https://github.com/Shougo/dein.vim) for managing plugins.
-I installed it using the recommended procedure, that is:
-
-```
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.cache/dein
-```
-
-Then for autocompletion I have 
-[deoplete](https://github.com/Shougo/deoplete.nvim), 
-with the following sources:
-
-+ [deoplete-jedi](https://github.com/zchee/deoplete-jedi)
+I use [vim-plug](https://github.com/junegunn/vim-plug) as plugin 
+manager. See the installation instructions there. Run `:PlugInstall` to
+install plugins.
 
 #### hjkl
 
@@ -201,6 +190,16 @@ git config --global color.pager no
 git config --global core.pager nvimpager
 ```
 And symlink `nvimpager/init.vim` to `~/.config/nvimpager/init.vim`.
+
+#### Python black
+
+I use python black for autoformatting my code. To install, simply
+run:
+```
+sudo pip install black
+```
+
+This also needs the `python-neovim` package to work.
 
 # cron
 
