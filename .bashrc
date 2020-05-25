@@ -15,7 +15,7 @@ alias wc='nmcli d wifi c'  # wc for wifi connect
 alias m='offlineimap; neomutt'  # m for mail
 alias c='khal calendar'  # c for calendar
 alias cn='khal new'  # cn for calendar new
-alias pom='nohup breaktime 25 &'  # work for one pomodoro (25 min)
+alias pom='nohup breaktime 25 >/dev/null 2>&1 &'  # work for one pomodoro (25 min)
 alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/brambozz'
 
 # Taskwarrior
@@ -101,6 +101,8 @@ PS1='[\u@\h \W]\$ '
 #else
 if [ -f "/home/bram/miniconda3/etc/profile.d/conda.sh" ]; then
 . "/home/bram/miniconda3/etc/profile.d/conda.sh"
+elif [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+. "/opt/miniconda3/etc/profile.d/conda.sh"
 else
 export PATH="/home/bram/miniconda3/bin:$PATH"
 fi
