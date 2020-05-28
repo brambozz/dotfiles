@@ -158,9 +158,20 @@ mode "resize" {
 
 ## Style
 
-default_border pixel 2
+default_border pixel 3
 gaps inner 10
-gaps outer -8
+gaps outer -10
 smart_gaps on
+
+### Colors
+# %%base16_template: sway##default %%
+# Base16 Atlas - sway color config
+# Scheme by Alex Lende (https://ajlende.com)
+
+client.focused #869696 #002635 #869696 #869696 #869696
+client.focused_inactive #002635 #002635 #a1a19a #002635 #002635
+client.unfocused #002635 #002635 #a1a19a #002635 #002635
+
+# %%base16_template_end%%
 
 include /etc/sway/config.d/*
