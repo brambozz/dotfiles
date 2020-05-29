@@ -1,4 +1,4 @@
 [Added Associations]
 [Removed Associations]
 [Default Applications]
-application/pdf=okularApplication_pdf.desktop
+application/pdf=org.pwmt.zathura.desktop
