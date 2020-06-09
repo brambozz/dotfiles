@@ -17,12 +17,13 @@ alias c='khal calendar'  # c for calendar
 alias cn='khal new'  # cn for calendar new
 alias pom='nohup breaktime 25 >/dev/null 2>&1 &'  # work for one pomodoro (25 min)
 alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/brambozz'
+alias ssh='kitty +kitten ssh'
 
 # Taskwarrior
 alias t_lastweeks='task end.after:today-2wk completed'
 
 ## Phd 
-alias p='cd /mnt/synology/pelvis/projects/bram'
+alias p='cd /mnt/netcache/pelvis/projects/bram'
 if [ -f $HOME/.vpn_alias ]; then
     . $HOME/.vpn_alias
 fi
