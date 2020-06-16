@@ -16,14 +16,14 @@ map s zoom out
 map r zoom best-fit
 
 # Other settings
-
+set selection-clipboard clipboard
 set recolor true
 
 # Color scheme
 # %%base16_template: zathura##default %%
-set recolor-darkcolor "#e9e9f4"
-set recolor-lightcolor "#282936"
-set default-bg "#282936"
+set recolor-darkcolor "#d5c4a1"
+set recolor-lightcolor "#1d2021"
+set default-bg "#1d2021"
 
 # TODO: set status bar color
 
