@@ -16,12 +16,13 @@ alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/bramb
 alias ssh='kitty +kitten ssh'
 
 ## One letter aliases
-alias e='nvim'  # e for editor
+alias e='$EDITOR'  # e for editor
 alias w='nmcli d wifi'  # w for wifi
 alias wc='nmcli d wifi c'  # wc for wifi connect
 alias m='offlineimap; neomutt'  # m for mail
-alias c='khal calendar'  # c for calendar
-alias cn='khal new'  # cn for calendar new
+alias t='task'  # t for task
+alias tn='task add'  # tn for task new
+alias td='task done'  # td for task done
 
 ## Taskwarrior
 alias t_lastweeks='task end.after:today-2wk completed'
