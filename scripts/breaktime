@@ -3,8 +3,4 @@
 # Argument is minutes until breaktime
 minutes=$1
 
-notify-send "Breaktime in ${minutes} minutes"
-
-sleep ${minutes}m
-
-notify-send "Breaktime!"
+nohup /bin/sh -c "notify-send \"Breaktime in ${minutes} minutes\";sleep ${minutes}m;notify-send "Breaktime!"" >& /dev/null & 

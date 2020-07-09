@@ -11,7 +11,7 @@
 alias ls='ls --color=auto'
 alias lampp='sudo /opt/lampp/lampp'
 alias mysql='sudo /opt/lampp/bin/mysql'
-alias pom='nohup breaktime 25 >/dev/null 2>&1 &'  # work for one pomodoro (25 min)
+alias pom='breaktime 25'  # work for one pomodoro (25 min)
 alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/brambozz'
 alias ssh='kitty +kitten ssh'
 
