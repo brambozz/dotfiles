@@ -14,7 +14,6 @@ export MANPAGER=nvimpager
 export CUPS_USER='umcn\z955156'
 export XDG_CONFIG_HOME=$HOME/.config
 export MOZ_ENABLE_WAYLAND=1
-export QT_QPA_PLATFORM=wayland-egl
 export GRIM_DEFAULT_DIR=$HOME/screenshots
 
 # Leave this at the bottom to autostart X at login

@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # Argument is minutes until breaktime
-sleep $1m
+minutes=$1
 
-notify-send "Breaktime!"
+nohup /bin/sh -c "notify-send \"Breaktime in ${minutes} minutes\";sleep ${minutes}m;notify-send "Breaktime!"" >& /dev/null & 

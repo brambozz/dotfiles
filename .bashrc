@@ -6,23 +6,29 @@
 [[ $- != *i* ]] && return
 
 # Alias definitions
+
+## General
 alias ls='ls --color=auto'
 alias lampp='sudo /opt/lampp/lampp'
 alias mysql='sudo /opt/lampp/bin/mysql'
-alias e='nvim'  # e for editor
+alias pom='breaktime 25'  # work for one pomodoro (25 min)
+alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/brambozz'
+alias ssh='kitty +kitten ssh'
+
+## One letter aliases
+alias e='$EDITOR'  # e for editor
 alias w='nmcli d wifi'  # w for wifi
 alias wc='nmcli d wifi c'  # wc for wifi connect
 alias m='offlineimap; neomutt'  # m for mail
-alias c='khal calendar'  # c for calendar
-alias cn='khal new'  # cn for calendar new
-alias pom='nohup breaktime 25 >/dev/null 2>&1 &'  # work for one pomodoro (25 min)
-alias keymap='cd /home/bram/qmk_firmware/keyboards/keebio/levinson/keymaps/brambozz'
+alias t='task'  # t for task
+alias tn='task add'  # tn for task new
+alias td='task done'  # td for task done
 
-# Taskwarrior
+## Taskwarrior
 alias t_lastweeks='task end.after:today-2wk completed'
 
 ## Phd 
-alias p='cd /mnt/synology/pelvis/projects/bram'
+alias p='cd /mnt/netcache/pelvis/projects/bram'
 if [ -f $HOME/.vpn_alias ]; then
     . $HOME/.vpn_alias
 fi
@@ -42,7 +48,7 @@ alias runstd='ssh dlc-arbok -l diag ./c-submit --require-mem=30g --require-cpus=
 alias stopjob='ssh dlc-arbok -l diag ./c-stop'
 alias dlc='~/dc/phd/scripts/dlc'
 
-# Git aliases
+## Git
 alias gst='git status'
 alias gpl='git pull'
 alias gps='git push'
@@ -50,9 +56,10 @@ alias ga='git add'
 alias gau='git add -u'
 alias gc='git commit -e'
 
-# nnn cd on quit
+# Configure nnn cd on quit
 export NNN_TMPFILE="/tmp/nnn"
 
+# Custom functions
 f()
 {
         nnn -l "$@"

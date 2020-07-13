@@ -16,7 +16,7 @@ map s zoom out
 map r zoom best-fit
 
 # Other settings
-
+set selection-clipboard clipboard
 set recolor true
 
 # Color scheme
@@ -26,7 +26,5 @@ set recolor-lightcolor "#1d2021"
 set default-bg "#1d2021"
 set statusbar-bg "#3c3836"
 set statusbar-fg "#d5c4a1"
-
-# TODO: set status bar color
 
 # %%base16_template_end%%
