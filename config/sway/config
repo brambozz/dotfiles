@@ -7,8 +7,8 @@ exec autotiling
 exec redshift
 
 ## Set wallpaper
-exec_always wallrnd --image /tmp/wallpaper.svg --config /home/bram/.config/wallrnd/wallrnd.toml
-output * bg /tmp/wallpaper.svg fill
+exec_always wallrnd --image ~/wallpaper.svg --config ~/.config/wallrnd/wallrnd.toml
+output * bg ~/wallpaper.svg fill
 
 ## Variables
 set $mod Mod4
