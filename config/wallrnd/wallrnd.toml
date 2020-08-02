@@ -1,0 +1,83 @@
+[global]
+deviation = 0 # How much the color varies within a shape. 0 for uniform shapes.
+weight = 0 # How far from the theme are the colors. 0 for theme-only colors, 100 for fully random.
+size = 100 # How big are tiles. Can be overriden for each tiling
+# You should set the dimensions TWICE AS BIG as you actual screen
+# resolution if you're going to generate SVG with line width 0.0
+# This will truly hide the lines.
+# Warning: massive performance hit when converting to PNG, SVG is still fine
+# ("massive" being ~700ms instead of ~130ms in --release)
+width = 1920 # Screen dimension
+height = 1080 # Screen dimension
+
+
+# %%base16_template: wallrnd##default %%
+# Base16 Dracula - wallrnd color config
+# Scheme by Dracula
+[colors]
+# List of named colors
+# Either [r, g, b] (dec.) or #RRGGBB (hex.), both 0-255
+# List of colors here: all SVG named colors
+base00 = "#282936"
+base01 = "#3a3c4e"
+base02 = "#4d4f68"
+base03 = "#626483"
+base04 = "#62d6e8"
+base05 = "#e9e9f4"
+base06 = "#f1f2f8"
+base07 = "#f7f7fb"
+base08 = "#ea51b2"
+base09 = "#b45bcf"
+base0A = "#00f769"
+base0B = "#ebff87"
+base0C = "#a1efe4"
+base0D = "#62d6e8"
+base0E = "#b45bcf"
+
+# %%base16_template_end%%
+#
+[lines]
+# Set line appearance
+width = 5
+color = "base05" # Supports named colors as well
+
+[themes]
+# A theme is a list of weighted colors (named or not); e.g. theme1 = ["white x20 ~10", "black x10"]
+# You may include a previously created theme inside another; e.g. theme2 = ["theme2", "grey x20"]
+# A color can also be described by a table: { color, weight, distance, variability }
+base16 = [
+  { color = "base00", weight = 100, distance = 10 },
+  { color = "base08", weight = 50, distance = 10 },
+  { color = "base09", weight = 50, distance = 10 },
+  { color = "base0A", weight = 50, distance = 10 },
+  { color = "base0B", weight = 50, distance = 10 },
+  { color = "base0C", weight = 50, distance = 10 },
+  { color = "base0D", weight = 50, distance = 10 },
+  { color = "base0E", weight = 50, distance = 10 }
+]
+
+[shapes]
+all = []
+
+[data.patterns]
+nb_free_triangles = 15
+nb_free_circles = 15
+nb_free_stripes = 15
+nb_parallel_stripes = 15
+nb_concentric_circles = 13
+nb_crossed_stripes = 13
+nb_free_spirals = 3
+nb_parallel_waves = 10
+nb_parallel_sawteeth = 10
+var_parallel_stripes = 10 # Variability of the orientation
+var_crossed_stripes = 10
+width_spiral = 0.2 # As a proportion of the window height
+width_stripe = 0.2
+width_wave = 0.7
+width_sawtooth = 0.5
+tightness_spiral = 0.3 # As a proportion of width_spiral
+
+[[entry]]
+themes = ["base16"]
+span = "0000-2359"
+shapes = ["all"]

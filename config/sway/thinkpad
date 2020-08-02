@@ -1,6 +1,4 @@
 # Custom sway config for thinkpad
 #
-# Wallpaper
-output * bg /home/bram/documents/wallpapers/fiat5barkie.png fill
 
 include ./config

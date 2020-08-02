@@ -6,6 +6,10 @@ exec mako
 exec autotiling
 exec redshift
 
+## Set wallpaper
+exec_always wallrnd --image /tmp/wallpaper.svg --config /home/bram/.config/wallrnd/wallrnd.toml
+output * bg /tmp/wallpaper.svg fill
+
 ## Variables
 set $mod Mod4
 set $left o
@@ -165,12 +169,12 @@ smart_gaps on
 
 ### Colors
 # %%base16_template: sway##default %%
-# Base16 Atlas - sway color config
-# Scheme by Alex Lende (https://ajlende.com)
+# Base16 Dracula - sway color config
+# Scheme by Dracula
 
-client.focused #869696 #002635 #869696 #869696 #869696
-client.focused_inactive #002635 #002635 #a1a19a #002635 #002635
-client.unfocused #002635 #002635 #a1a19a #002635 #002635
+client.focused #62d6e8 #282936 #62d6e8 #62d6e8 #62d6e8
+client.focused_inactive #282936 #282936 #e9e9f4 #282936 #282936
+client.unfocused #282936 #282936 #e9e9f4 #282936 #282936
 
 # %%base16_template_end%%
 
