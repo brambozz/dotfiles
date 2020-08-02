@@ -45,7 +45,8 @@ zathura-djvu
 	sideways motion.
 - [ ] Configure swaylock background image (could be screenshot, pipes?)
 - [ ] Change look of sway
-- [ ] Remove titlebars of windows in sway
+- [x] Remove titlebars of windows in sway
+- [ ] Look into wlogout
 
 # dotfiles
 
