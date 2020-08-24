@@ -1,0 +1,19 @@
+# Remap movement keys
+map global normal n j
+map global normal N J
+map global normal e k
+map global normal E K
+map global normal i l
+map global normal I L
+map global normal o h
+map global normal O H
+
+# Other remaps
+map global normal l i
+map global normal L I
+map global normal k o
+map global normal K O
+map global normal h e
+map global normal H E
+map global normal j n
+map global normal J N
