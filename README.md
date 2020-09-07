@@ -39,6 +39,12 @@ zathura-pdf-poppler
 zathura-djvu
 ```
 
+## Wallrnd
+
+I use [wallrnd](https://github.com/Vanille-N/wallrnd) to generate random
+wallpapers that follow the colorscheme on startup. Follow the 
+instructions on the repository to install manually.
+
 ## Prettify
 - [ ] Configure audio hotkeys in sway
 - [ ] Configure sway keybindings more ergonomically, i.e. minimal
