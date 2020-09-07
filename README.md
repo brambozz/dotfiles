@@ -195,6 +195,15 @@ sudo pip install black
 
 This also needs the `python-neovim` package to work.
 
+# Kakoune
+
+Experimenting with `kakoune` as new text editor. Config needs the
+following to work:
+
+```
+python-black
+```
+
 # cron
 
 In the scripts directory there are a couple of scripts that I set up

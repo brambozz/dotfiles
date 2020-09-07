@@ -1,3 +1,4 @@
+# TODO: make all often used normal keys homerow +/- 1
 # Remap movement keys
 map global normal n j
 map global normal N J
@@ -7,6 +8,8 @@ map global normal i l
 map global normal I L
 map global normal o h
 map global normal O H
+map global normal <a-o> <a-h>
+map global normal <a-i> <a-l>
 
 # Other remaps
 map global normal l i
@@ -17,3 +20,9 @@ map global normal h e
 map global normal H E
 map global normal j n
 map global normal J N
+
+# Black autoformatting
+hook global WinSetOption filetype=python %{
+    set-option window formatcmd 'black -q  -'
+    hook buffer BufWritePre .* %{format}
+}
