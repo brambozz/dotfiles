@@ -1,5 +1,5 @@
 # TODO: make all often used normal keys homerow +/- 1
-# Remap movement keys
+# Remap movement keys (plus modifiers)
 map global normal n j
 map global normal N J
 map global normal e k
@@ -11,6 +11,10 @@ map global normal O H
 map global normal <a-o> <a-h>
 map global normal <a-i> <a-l>
 
+# Remap scrolling
+map global normal <c-e> <c-u>
+map global normal <c-n> <c-d>
+
 # Other remaps
 map global normal l i
 map global normal L I
@@ -21,6 +25,11 @@ map global normal H E
 map global normal j n
 map global normal J N
 
+# TODO map scrolling
+# TODO line numbering
+# TODO line wrapping
+# TODO color column 72
+#
 # Black autoformatting
 hook global WinSetOption filetype=python %{
     set-option window formatcmd 'black -q  -'
