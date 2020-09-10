@@ -56,6 +56,11 @@ alias ga='git add'
 alias gau='git add -u'
 alias gc='git commit -e'
 
+# New terminal opens in last working directory
+# PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
+# [[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"
+# TODO: this fails for mounted directories
+
 # Configure nnn cd on quit
 export NNN_TMPFILE="/tmp/nnn"
 
