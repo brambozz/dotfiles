@@ -26,8 +26,10 @@ map global normal j n
 map global normal J N
 
 # TODO map scrolling
-# TODO line numbering
-# TODO line wrapping
+# Line numbering
+addhl global/ number-lines
+# Line wrapping
+addhl global/ wrap
 # TODO color column 72
 #
 # Black autoformatting
