@@ -25,13 +25,22 @@ map global normal H E
 map global normal j n
 map global normal J N
 
-# TODO map scrolling
+# Completion menu remaps
+hook global InsertCompletionShow .* %{
+    map window insert <c-e> <c-p>
+}
+
+hook global InsertCompletionHide .* %{
+    unmap window insert <c-e> <c-p>
+}
+
 # Line numbering
 addhl global/ number-lines
 # Line wrapping
 addhl global/ wrap
-# TODO color column 72
-#
+# Color column 72
+addhl global/ column 72 PrimarySelection
+
 # Black autoformatting
 hook global WinSetOption filetype=python %{
     set-option window formatcmd 'black -q  -'
