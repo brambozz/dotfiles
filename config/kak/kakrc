@@ -43,8 +43,18 @@ addhl global/ wrap
 # Color column 72
 addhl global/ column 72 PrimarySelection
 
-# Black autoformatting
+# Python settings
 hook global WinSetOption filetype=python %{
+    # Black autoformatting
     set-option window formatcmd 'black -q  -'
-    hook buffer BufWritePre .* %{format}
+    hook -group black_fmt buffer BufWritePre .* %{format}
+
+    # Remap tab to four spaces
+    set-option window indentwidth 4
+    map global insert <tab> <space><space><space><space>
+}
+
+# Exclude datateam directory for black
+hook global WinSetOption .*/diag-data-management/.* %{
+    remove-hooks buffer black_fmt
 }
