@@ -23,6 +23,7 @@ alias m='offlineimap; neomutt'  # m for mail
 alias t='task'  # t for task
 alias tn='task add'  # tn for task new
 alias td='task done'  # td for task done
+alias c='wl-copy -n'  # c for copy
 
 ## Taskwarrior
 alias t_lastweeks='task end.after:today-2wk completed'
