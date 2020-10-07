@@ -198,11 +198,14 @@ This also needs the `python-neovim` package to work.
 # Kakoune
 
 Experimenting with `kakoune` as new text editor. Config needs the
-following to work:
+following packages to work:
 
 ```
 python-black
 ```
+
+Also [plug.kak](https://github.com/robertmeta/plug.kak) should be
+installed. Follow the instructions in the repository.
 
 # cron
 
