@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Script to automatically and realtime sync local changes to vileplume
+
+# Mount vileplume
+vileplume
+
+destination="/home/bram/shares/vileplume/tmp/bram"
+paths="/home/bram/repos/diag-data-management/"
+
+# Initial sync
+echo "Performing initial sync"
+rsync -avz --exclude=".*" $paths $destination
+echo "Initial sync done"
+
+# Watch realtime changes
+while true; do
+inotifywait -r -e modify,create,delete,move --format "%f" $paths |
+	while read filename; do
+		echo "Detected changes in file: $filename"
+
+		# Perform full sync
+		rsync -avz --exclude=".*" $paths $destination
+	done
+done
