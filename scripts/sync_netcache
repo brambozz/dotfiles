@@ -6,6 +6,7 @@ destination="/mnt/netcache/pelvis/projects/bram/repos"
 paths="/home/bram/repos/abdomenmrus-cinemri-reader-study 
 	/home/bram/repos/abdomenmrus-cinemri-registration  
 	/home/bram/repos/abdomenmrus-cinemri-baselines  
+	/home/bram/repos/iterative_unet
 	/home/bram/repos/abdomenmrus-cinemri" 
 
 # Initial sync
