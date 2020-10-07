@@ -48,6 +48,10 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "lePerdu/kakboard" %{
         hook global WinCreate .* %{ kakboard-enable }
 }
+plug 'mreppen/kakoune-sway' %{
+    set-option global windowing_modules 'x11'
+    map global user n ': sway-new<ret>' -docstring 'Clone this window via sway'
+}
 
 ## kak-lsp configuation
 eval %sh{kak-lsp --kakoune -s $kak_session}
