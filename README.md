@@ -202,6 +202,8 @@ following packages to work:
 
 ```
 python-black
+python-language-server
+kak-lsp
 ```
 
 Also [plug.kak](https://github.com/robertmeta/plug.kak) should be

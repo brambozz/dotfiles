@@ -46,6 +46,13 @@ addhl global/ column 72 PrimarySelection
 # Plugins
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
+## kak-lsp configuation
+eval %sh{kak-lsp --kakoune -s $kak_session}
+hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %{
+    lsp-enable-window
+}
+
+
 # Python settings
 hook global WinSetOption filetype=python %{
     # Black autoformatting
