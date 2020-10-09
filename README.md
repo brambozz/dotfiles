@@ -209,6 +209,12 @@ kak-lsp
 Also [plug.kak](https://github.com/robertmeta/plug.kak) should be
 installed. Follow the instructions in the repository.
 
+Plugins that I want to check out:
+
+```
+kakoune-buffers
+```
+
 # cron
 
 In the scripts directory there are a couple of scripts that I set up
