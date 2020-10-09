@@ -12,27 +12,27 @@
 " This file was tested only with terminal neovim
 
 " %%base16_template: nvim##default %%
-let s:gui00        = "1d2021"
-let s:gui01        = "3c3836"
-let s:gui02        = "504945"
-let s:gui03        = "665c54"
-let s:gui04        = "bdae93"
-let s:gui05        = "d5c4a1"
-let s:gui06        = "ebdbb2"
-let s:gui07        = "fbf1c7"
-let s:gui08        = "fb4934"
-let s:gui09        = "fe8019"
-let s:gui0A        = "fabd2f"
-let s:gui0B        = "b8bb26"
-let s:gui0C        = "8ec07c"
-let s:gui0D        = "83a598"
-let s:gui0E        = "d3869b"
-let s:gui0F        = "d65d0e"
+let s:gui00        = "282936"
+let s:gui01        = "3a3c4e"
+let s:gui02        = "4d4f68"
+let s:gui03        = "626483"
+let s:gui04        = "62d6e8"
+let s:gui05        = "e9e9f4"
+let s:gui06        = "f1f2f8"
+let s:gui07        = "f7f7fb"
+let s:gui08        = "ea51b2"
+let s:gui09        = "b45bcf"
+let s:gui0A        = "00f769"
+let s:gui0B        = "ebff87"
+let s:gui0C        = "a1efe4"
+let s:gui0D        = "62d6e8"
+let s:gui0E        = "b45bcf"
+let s:gui0F        = "00f769"
 
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-gruvbox-dark-hard"
+let g:colors_name = "base16-dracula"
 
 " %%base16_template_end%%
 " Highlight everything

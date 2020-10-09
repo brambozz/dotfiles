@@ -1,0 +1,9 @@
+# %%base16_template: sway##default %%
+# Base16 Dracula - sway color config
+# Scheme by Dracula
+
+client.focused #62d6e8 #282936 #62d6e8 #62d6e8 #62d6e8
+client.focused_inactive #282936 #282936 #e9e9f4 #282936 #282936
+client.unfocused #282936 #282936 #e9e9f4 #282936 #282936
+
+# %%base16_template_end%%
