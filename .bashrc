@@ -23,6 +23,7 @@ alias m='offlineimap; neomutt'  # m for mail
 alias t='task'  # t for task
 alias tn='task add'  # tn for task new
 alias td='task done'  # td for task done
+alias c='wl-copy -n'  # c for copy
 
 ## Taskwarrior
 alias t_lastweeks='task end.after:today-2wk completed'
@@ -45,7 +46,7 @@ alias runint_high='ssh dlc-arbok -l diag ./c-submit --priority=high --interactiv
 alias runint='ssh dlc-arbok -l diag ./c-submit --interactive --require-mem=40g --require-cpus=4 --gpu-count=1 bramdewilde 8894 4 doduo1.umcn.nl/bramdw/interactive:latest'
 alias runstd_high='ssh dlc-arbok -l diag ./c-submit --priority=high --require-mem=40g --require-cpus=4 --gpu-count=1 bramdewilde 8894 72 doduo1.umcn.nl/bramdw/standard:latest'
 alias runstd='ssh dlc-arbok -l diag ./c-submit --require-mem=30g --require-cpus=4 --gpu-count=1 bramdewilde 8894 72 doduo1.umcn.nl/bramdw/standard:latest'
-alias stopjob='ssh dlc-arbok -l diag ./c-stop'
+alias stopjob='ssh dlc-ditto -l diag ./c-stop'
 alias dlc='~/dc/phd/scripts/dlc'
 
 ## Git

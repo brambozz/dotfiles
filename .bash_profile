@@ -5,10 +5,10 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Set environment variables
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=kak
+export VISUAL=kak
 export BROWSER=firefox
-export TERM=alacritty
+export TERM=kitty
 export PAGER=nvimpager
 export MANPAGER=nvimpager
 export CUPS_USER='umcn\z955156'

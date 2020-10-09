@@ -25,15 +25,53 @@ map global normal H E
 map global normal j n
 map global normal J N
 
-# TODO map scrolling
+# Completion menu remaps
+hook global InsertCompletionShow .* %{
+    map window insert <c-e> <c-p>
+}
+
+hook global InsertCompletionHide .* %{
+    unmap window insert <c-e> <c-p>
+}
+
+map global user W '|fmt --width 72<ret>' -docstring "Wrap to 72 columns"
+
 # Line numbering
 addhl global/ number-lines
 # Line wrapping
 addhl global/ wrap
-# TODO color column 72
-#
-# Black autoformatting
+# Color column 72
+addhl global/ column 72 PrimarySelection
+
+# Plugins
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "lePerdu/kakboard" %{
+        hook global WinCreate .* %{ kakboard-enable }
+}
+plug 'mreppen/kakoune-sway' %{
+    set-option global windowing_modules 'x11'
+    map global user n ': sway-new<ret>' -docstring 'Clone this window via sway'
+}
+
+## kak-lsp configuation
+eval %sh{kak-lsp --kakoune -s $kak_session}
+hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %{
+    lsp-enable-window
+}
+
+
+# Python settings
 hook global WinSetOption filetype=python %{
+    # Black autoformatting
     set-option window formatcmd 'black -q  -'
-    hook buffer BufWritePre .* %{format}
+    hook -group blackfmt buffer BufWritePre .* %{format}
+
+    # Remap tab to four spaces
+    set-option window indentwidth 4
+    map global insert <tab> <space><space><space><space>
+
+    # Exclude datateam directory for black
+    eval %sh{
+        echo $kak_buffile | grep -q diag-data-management && echo 'remove-hooks buffer blackfmt'
+    }
 }

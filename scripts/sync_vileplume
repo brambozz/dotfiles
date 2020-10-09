@@ -1,13 +1,12 @@
 #!/bin/sh
 
-# Script to automatically and realtime sync local changes to netcache
+# Script to automatically and realtime sync local changes to vileplume
 
-destination="/mnt/netcache/pelvis/projects/bram/repos"
-paths="/home/bram/repos/abdomenmrus-cinemri-reader-study 
-	/home/bram/repos/abdomenmrus-cinemri-registration  
-	/home/bram/repos/abdomenmrus-cinemri-baselines  
-	/home/bram/repos/iterative_unet
-	/home/bram/repos/abdomenmrus-cinemri" 
+# Mount vileplume
+vileplume
+
+destination="/home/bram/shares/vileplume/tmp/bram"
+paths="/home/bram/repos/diag-data-management/"
 
 # Initial sync
 echo "Performing initial sync"
