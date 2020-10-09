@@ -36,7 +36,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'lervag/vimtex'
 Plug 'andymass/vim-matchup'
-Plug 'psf/black'
+Plug 'psf/black', { 'branch': 'stable' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 call plug#end()
