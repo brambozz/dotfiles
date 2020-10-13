@@ -54,6 +54,18 @@ instructions on the repository to install manually.
 - [x] Remove titlebars of windows in sway
 - [ ] Look into wlogout
 
+## Screen sharing
+
+Screen sharing under wayland is problematic. I got it to work in 
+chromium by installing the following:
+```
+libpipewire02
+xdg-desktop-portal-wlr-git (aur)
+```
+In chromium, pipewire support has to be enabled through 
+`chrome://flags`. I also set some extra environment variables, those
+are in `.bash_profile`.
+
 # dotfiles
 
 This repo contains various configuration files. 
