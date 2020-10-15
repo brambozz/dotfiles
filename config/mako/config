@@ -1,2 +1,19 @@
 default-timeout=5000
 layer=overlay
+padding=5
+margin=0
+border-size=5
+font=monospace 14
+
+# %%base16_template: mako##default %%
+# Base16 Dracula - mako color config
+# Scheme by Dracula
+background-color=#282936
+text-color=#e9e9f4
+border-color=#e9e9f4
+
+[urgency=high]
+text-color=#ea51b2
+border-color=#ea51b2
+
+# %%base16_template_end%%
