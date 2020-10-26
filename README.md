@@ -269,6 +269,11 @@ Then update any templates or schemes through
 In the scripts directory there are a number of scripts. 
 I make symbolic links to all of them in /usr/local/bin.
 
+# Mail
+
+For mail I switched to `geary`. Coupling the outlook addresses is easy.
+For the webmail, the mail server for IMAP and SMTP is `mail.zxcs.nl`.
+
 # Desired software list
 
 This is a list with things I want to switch to at some point.
