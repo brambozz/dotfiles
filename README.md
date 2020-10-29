@@ -1,18 +1,19 @@
-# Switch to sway
+# TODO
+- [ ] Configure audio hotkeys in sway
+- [ ] Configure sway keybindings more ergonomically, i.e. minimal
+	sideways motion.
+- [ ] Configure swaylock background image (could be screenshot, pipes?)
+- [ ] Change look of sway
+- [ ] Look into wlogout
 
-I am switching from bspwm to sway, mainly for the following reasons:
-1. Wayland is future-proof
-2. Support for different scaling factors per monitor
+# Essential packages
 
-This means that I have to switch to some other applications as well, 
-because it turns out many things depend on X.
-
-## Essential packages
-
-This is a list of packages that should result in a working sway config.
+This is a list of packages that should result in a working config.
 
 ```
 sway
+gnome
+gdm
 swaylock
 qt5-wayland
 xorg-server-xwayland
@@ -31,6 +32,25 @@ redshift-wlr-gamma-control-git (aur)
 [notify-send.py](https://github.com/phuhl/notify-send.py) (pip)
 ```
 
+# Display manager configuration
+
+I use `gdm` as display manager. This will automatically detect sessions
+for `gnome` and `sway`. However, the sessions for `sway` need to be
+changed, in order to link to the correct configuration file.
+
+```
+[Desktop Entry]
+Name=Sway
+Comment=An i3-compatible Wayland compositor
+Exec=sway -c /home/bram/.config/sway/{goat, thinkpad}
+Type=Application
+```
+
+# Environment variables
+
+When starting `sway` from `gdm`, `.bash_profile` is not sourced.
+I therefore define my environment variables in `.pam_environment`.
+
 ## Other packages
 
 ```
@@ -45,15 +65,6 @@ I use [wallrnd](https://github.com/Vanille-N/wallrnd) to generate random
 wallpapers that follow the colorscheme on startup. Follow the 
 instructions on the repository to install manually.
 
-## Prettify
-- [ ] Configure audio hotkeys in sway
-- [ ] Configure sway keybindings more ergonomically, i.e. minimal
-	sideways motion.
-- [ ] Configure swaylock background image (could be screenshot, pipes?)
-- [ ] Change look of sway
-- [x] Remove titlebars of windows in sway
-- [ ] Look into wlogout
-
 ## Screen sharing
 
 Screen sharing under wayland is problematic. I got it to work in 
@@ -63,8 +74,7 @@ libpipewire02
 xdg-desktop-portal-wlr-git (aur)
 ```
 In chromium, pipewire support has to be enabled through 
-`chrome://flags`. I also set some extra environment variables, those
-are in `.bash_profile`.
+`chrome://flags`. 
 
 # dotfiles
 
@@ -72,7 +82,7 @@ This repo contains various configuration files.
 This readme explains for some programs reasons for specific choices and 
 links to useful information so that I can find stuff back later.
 It starts off with an overview of what I did to setup Arch to my
-preferences. This is meant more as a personal reference.
+preferences.
 
 ## Arch linux Installation
 
