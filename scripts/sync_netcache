@@ -7,20 +7,27 @@ paths="/home/bram/repos/abdomenmrus-cinemri-reader-study
 	/home/bram/repos/abdomenmrus-cinemri-registration  
 	/home/bram/repos/abdomenmrus-cinemri-baselines  
 	/home/bram/repos/iterative_unet
-	/home/bram/repos/abdomenmrus-cinemri" 
+	/home/bram/repos/abdomenmrus-cinemri"
 
 # Initial sync
 echo "Performing initial sync"
-rsync -avz --exclude=".*" $paths $destination
+rsync -avz --exclude=".*" --exclude="__*" $paths $destination
 echo "Initial sync done"
 
 # Watch realtime changes
 while true; do
-inotifywait -r -e modify,create,delete,move --format "%f" $paths |
+inotifywait -r -e modify,create,delete,move --format "%w" $paths |
 	while read filename; do
-		echo "Detected changes in file: $filename"
+		# Find watched path
+		for path in $paths
+		do
+                    if [[ $filename == *$path* ]]; then
+                        watched_path=$path
+                    fi
+                done
+		echo "Detected changes in file: $watched_path"
 
-		# Perform full sync
-		rsync -avz --exclude=".*" $paths $destination
+		# Perform sync
+		rsync -avz --exclude=".*" --exclude="__*" $watched_path $destination
 	done
 done
