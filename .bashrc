@@ -34,12 +34,10 @@ if [ -f $HOME/.vpn_alias ]; then
     . $HOME/.vpn_alias
 fi
 alias backup='~/dc/phd/backup/backup.sh'
-alias henkjanzoom='xdg-open "zoommtg://zoom.us/join?action=join&confno=7462784494"'
-alias diagzoom='xdg-open "zoommtg://zoom.us/join?action=join&confno=3073085428"'
-alias ddhzoom='xdg-open "zoommtg://zoom.us/join?action=join&confno=95852053140"'
+alias henkjanzoom='chromium "https://zoom.us/wc/join/7462784494" &'
+alias ddhzoom='chromium "https://zoom.us/j/99805504072?pwd=K1BhQlFKQkp5OTJLZU1aTUw1MXkvQT09" &'
+alias designzoom='chromium "https://us02web.zoom.us/j/86771424792?pwd=RU05WmdPdnc2QytSNVlXWnhaMGZVQT09" &'
 alias vileplume='sshfs datateam@vileplume:/ ~/shares/vileplume'
-alias copyzoom='echo https://zoom.us/j/7278645668 | xclip -selection c'
-alias zoom='env -u QT_QPA_PLATFORM /usr/bin/zoom'
 
 ## Cluster
 alias runint_high='ssh dlc-arbok -l diag ./c-submit --priority=high --interactive --require-mem=40g --require-cpus=4 --gpu-count=1 bramdewilde 8894 4 doduo1.umcn.nl/bramdw/interactive:latest'
