@@ -5,6 +5,7 @@
 exec mako
 exec autotiling
 exec redshift
+exec cozy-desktop
 
 ## Set wallpaper
 exec_always wallrnd --image ~/wallpaper.svg --config ~/.config/wallrnd/wallrnd.toml
