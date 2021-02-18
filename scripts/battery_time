@@ -9,7 +9,7 @@ current_time=$(date +%H:%M)
 
 if [ $status0 = "Charging" ] || [ $status1 = "Charging" ]
 then
-	notify-send.py --replaces-process battery_time "$capacity0/$capacity1% ▲ $current_time"
+	notify-send.sh --replace-file=/tmp/battery_time "$capacity0/$capacity1% ▲ $current_time"
 else
-	notify-send.py --replaces-process battery_time "$capacity0/$capacity1% ▼ $current_time"
+	notify-send.sh --replace-file=/tmp/battery_time "$capacity0/$capacity1% ▼ $current_time"
 fi

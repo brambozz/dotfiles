@@ -29,7 +29,7 @@ base-devel
 imv
 autotiling (aur)
 redshift-wlr-gamma-control-git (aur)
-[notify-send.py](https://github.com/phuhl/notify-send.py) (pip)
+[notify-send.sh](https://github.com/vlevit/notify-send.sh) (aur)
 ```
 
 # Display manager configuration
@@ -271,7 +271,7 @@ makepkg -si
 # mako
 
 Notification daemon together with 
-[notify-send.py](https://github.com/phuhl/notify-send.py) is fire!
+[notify-send.sh](https://github.com/phuhl/notify-send.py) is fire!
 
 # pulseaudio
 
