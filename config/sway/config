@@ -43,17 +43,17 @@ bindsym Print exec grim -g "$(slurp)"
 
 # Audio
 bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +5 \
-	&& notify-send.py "Volume: $(pulsemixer --get-volume)" --replaces-process "volume"
+	&& notify-send.sh "Volume: $(pulsemixer --get-volume)" --replace-file=/tmp/volume_notification
 bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -5 \
-	&& notify-send.py "Volume: $(pulsemixer --get-volume)" --replaces-process "volume"
+	&& notify-send.sh "Volume: $(pulsemixer --get-volume)" --replace-file=/tmp/volume_notification
 bindsym XF86AudioMute exec pulsemixer --toggle-mute \
-	&& notify-send.py "Volume: $(pulsemixer --get-mute)" --replaces-process "volume"
+	&& notify-send.sh "Volume: $(pulsemixer --get-mute)" --replace-file=/tmp/volume_notification
 
 # Backlight
 bindsym XF86MonBrightnessDown exec light -U 10 \
-	&& notify-send.py "Backlight: $(light)" --replaces-process "backlight"
+	&& notify-send.sh "Backlight: $(light)" --replace-file=/tmp/light_notification
 bindsym XF86MonBrightnessUp exec light -A 10 \
-	&& notify-send.py "Backlight: $(light)" --replaces-process "backlight"
+	&& notify-send.sh "Backlight: $(light)" --replace-file=/tmp/light_notification
 
 # battery_time
 bindsym $mod+t exec battery_time
