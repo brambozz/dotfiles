@@ -44,6 +44,7 @@ alias ddhzoom='xdg-open "https://zoom.us/j/99805504072?pwd=K1BhQlFKQkp5OTJLZU1aT
 alias vileplume='sshfs datateam@vileplume:/ ~/shares/vileplume'
 alias stopjob='ssh dlc-ditto -l diag ./c-stop'
 alias dlc='~/dc/phd/scripts/dlc'
+alias tens='conda activate dl && tensorboard --logdir . && conda deactivate'
 
 ## Git
 alias gst='git status'
