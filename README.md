@@ -239,22 +239,13 @@ kakoune-buffers
 
 # cron
 
-In the scripts directory there are a couple of scripts that I set up
-to run in cron. Some of them require notifications, and cron needs
-some environment variables to run properly. I recommend putting the
-following lines on top of the crontab.
-
-```
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-DISPLAY=:0
-```
+Install `cronie` and enable `cronie.service`.
 
 I check my battery capacity with cron, with the following line
 in the crontab:
 
 ```
-*/5 * * * * battery_cap_check
+*/5 * * * * /usr/local/bin/battery_cap_check
 ```
 
 # yay
