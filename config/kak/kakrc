@@ -69,12 +69,4 @@ hook global WinSetOption filetype=python %{
     # Remap tab to four spaces
     set-option window indentwidth 4
     map global insert <tab> <space><space><space><space>
-
-    # Exclude datateam directories for black
-    eval %sh{
-        echo $kak_buffile | grep -q diag-data-management && echo 'remove-hooks buffer blackfmt'
-    }
-    eval %sh{
-        echo $kak_buffile | grep -q bodyct-data-management && echo 'remove-hooks buffer blackfmt'
-    }
 }
