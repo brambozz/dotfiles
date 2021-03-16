@@ -248,6 +248,12 @@ in the crontab:
 */5 * * * * /usr/local/bin/battery_cap_check
 ```
 
+I sync taskwarrior with this:
+
+```
+*/10 * * * * /usr/bin/task sync
+```
+
 # yay
 
 I use `yay` as AUR helper.
