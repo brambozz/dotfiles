@@ -18,4 +18,6 @@ do
     dest=$destination_prefix$path
 
     clsync -Mrsyncdirect -W $watch -D $dest -R /home/bram/repos/dotfiles/scripts/sync_rules -w 0 -t 0 -b
+
+    echo Now watching dir $watch
 done
