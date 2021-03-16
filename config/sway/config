@@ -18,7 +18,7 @@ set $down n
 set $up e
 set $right i
 set $term kitty
-set $browser firefox
+set $browser brave
 set $launcher wofi --show run
 
 ## Input configuration
