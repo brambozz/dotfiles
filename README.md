@@ -217,6 +217,15 @@ sudo pip install black
 
 This also needs the `python-neovim` package to work.
 
+# zsh
+
+I recently switched to `zsh` as shell. Additional packages to get the
+config working:
+
+```
+starship
+```
+
 # Kakoune
 
 Experimenting with `kakoune` as new text editor. Config needs the
