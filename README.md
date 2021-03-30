@@ -36,13 +36,15 @@ redshift-wlr-gamma-control-git (aur)
 
 I use `gdm` as display manager. This will automatically detect sessions
 for `gnome` and `sway`. However, the sessions for `sway` need to be
-changed, in order to link to the correct configuration file.
+changed, in order to support nvidia driver. I make it a separate file
+`sway_nvidia.desktop`, such that it does not get overwritten by sway
+updates.
 
 ```
 [Desktop Entry]
-Name=Sway
+Name=Sway with NVIDIA
 Comment=An i3-compatible Wayland compositor
-Exec=sway -c /home/bram/.config/sway/{goat, thinkpad}
+Exec=sway --my-next-gpu-wont-be-nvidia
 Type=Application
 ```
 
