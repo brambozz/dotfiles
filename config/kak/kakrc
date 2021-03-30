@@ -53,9 +53,9 @@ plug 'mreppen/kakoune-sway' %{
     map global user n ': sway-new<ret>' -docstring 'Clone this window via sway'
 }
 
-## kak-lsp configuation
+## kak-lsp configuration
 eval %sh{kak-lsp --kakoune -s $kak_session}
-hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %{
+hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp|latex) %{
     lsp-enable-window
 }
 
@@ -69,4 +69,10 @@ hook global WinSetOption filetype=python %{
     # Remap tab to four spaces
     set-option window indentwidth 4
     map global insert <tab> <space><space><space><space>
+}
+
+# Latex settings
+hook global WinSetOption filetype=latex %{
+    # Compile on save
+    hook window BufWritePost .* %{ %sh{ pdflatex *.tex } }
 }

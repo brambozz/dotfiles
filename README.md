@@ -237,10 +237,13 @@ following packages to work:
 python-black
 python-language-server
 kak-lsp
+texlab
 ```
 
 Also [plug.kak](https://github.com/robertmeta/plug.kak) should be
 installed. Follow the instructions in the repository.
+
+After initial install, run `:plug-install` to install all plugins.
 
 Plugins that I want to check out:
 
