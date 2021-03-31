@@ -40,11 +40,13 @@ changed, in order to support nvidia driver. I make it a separate file
 `sway_nvidia.desktop`, such that it does not get overwritten by sway
 updates.
 
+Also, I need to link to the correct config file.
+
 ```
 [Desktop Entry]
 Name=Sway with NVIDIA
 Comment=An i3-compatible Wayland compositor
-Exec=sway --my-next-gpu-wont-be-nvidia
+Exec=sway --my-next-gpu-wont-be-nvidia -c /home/bram/.config/sway/{goat, thinkpad}
 Type=Application
 ```
 
