@@ -63,6 +63,14 @@ zathura-pdf-poppler
 zathura-djvu
 ```
 
+## Font
+
+I use `Fira Sans` and `Nerd Font Fira Code`. Download them as:
+```
+otf-fira-sans
+nerd-fonts-fira-code (aur)
+```
+
 ## Wallrnd
 
 I use [wallrnd](https://github.com/Vanille-N/wallrnd) to generate random

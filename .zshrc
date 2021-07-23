@@ -1,5 +1,6 @@
 # History
 HISTFILE=~/.histfile
+HISTCONTROL=ignorespace
 HISTSIZE=1000
 SAVEHIST=1000
 setopt share_history
