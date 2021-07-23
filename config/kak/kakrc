@@ -15,15 +15,18 @@ map global normal <a-i> <a-l>
 map global normal <c-e> <c-u>
 map global normal <c-n> <c-d>
 
-# Other remaps
+# Remap counterparts of movement keys
 map global normal l i
 map global normal L I
 map global normal k o
 map global normal K O
 map global normal h e
 map global normal H E
-map global normal j n
-map global normal J N
+map global normal <a-l> <a-i>
+
+# Remap search keys
+map global normal m n
+map global normal M <a-n>
 
 # Completion menu remaps
 hook global InsertCompletionShow .* %{
