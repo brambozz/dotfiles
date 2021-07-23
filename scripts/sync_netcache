@@ -8,6 +8,8 @@ paths="abdomenmrus-cinemri-reader-study
 	abdomenmrus-cinemri-registration  
 	abdomenmrus-cinemri-baselines  
 	abdomenmrus-cinemri-motion-detection
+	abdomenmrus-cinemri-quality-reader-study
+	abdomenmrus-cinemri-voxelmorph
 	iterative_unet
 	abdomenmrus-cinemri"
 
