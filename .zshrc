@@ -1,3 +1,5 @@
+source /etc/profile
+
 # History
 HISTFILE=~/.histfile
 HISTCONTROL=ignorespace
@@ -79,6 +81,7 @@ sf()
                 rm -f $NNN_TMPFILE > /dev/null
         fi
 }
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
