@@ -48,7 +48,7 @@ alias vileplume='sshfs datateam@vileplume:/ ~/shares/vileplume'
 alias stopjob='ssh dlc-ditto -l diag ./c-stop'
 alias dlc='~/dc/phd/scripts/dlc'
 alias tens='conda activate dl && tensorboard --logdir . && conda deactivate'
-
+alias texmk='latexmk -pdf -pvc'
 ## Git
 alias gst='git status'
 alias gpl='git pull'

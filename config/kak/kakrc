@@ -76,6 +76,7 @@ hook global WinSetOption filetype=python %{
 
 # Latex settings
 hook global WinSetOption filetype=latex %{
-    # Compile on save
-    hook window BufWritePost .* %{ %sh{ pdflatex *.tex } }
+    hook window BufWritePre .* %{
+        nop %sh{ latexmk -pdf > /dev/null 2>&1 < /dev/null & }
+    }
 }
