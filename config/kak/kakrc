@@ -38,6 +38,7 @@ hook global InsertCompletionHide .* %{
 }
 
 map global user W '|fmt --width 72<ret>' -docstring "Wrap to 72 columns"
+map global user l %{: enter-user-mode lsp<ret>} -docstring "LSP mode"
 
 # Line numbering
 addhl global/ number-lines
