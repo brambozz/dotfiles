@@ -27,7 +27,7 @@ alias ssh='kitty +kitten ssh'
 ## One letter aliases
 alias e='$EDITOR'  # e for editor
 alias w='nmcli d wifi'  # w for wifi
-alias wc='nmcli d wifi c'  # wc for wifi connect
+alias wcon='nmcli d wifi c'  # wc for wifi connect
 alias c='wl-copy -n'  # c for copy
 
 ## Taskwarrior
