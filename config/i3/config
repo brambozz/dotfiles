@@ -1,0 +1,170 @@
+## Exec commands
+exec dunst
+exec redshift
+exec cozy-desktop
+exec_always --no-startup-id autotiling
+
+## Variables
+set $mod Mod4
+set $alt Mod1
+set $left o
+set $down n
+set $up e
+set $right i
+set $term kitty
+set $browser brave
+set $launcher rofi -show run
+
+# Set wallpaper
+exec_always wallrnd --image ~/wallpaper.svg --config ~/.config/wallrnd/wallrnd.toml
+exec_always nitrogen --set-scaled ~/wallpaper.svg
+
+# Keyboard input configuration
+exec setxkbmap -model pc105 -layout us,us -variant colemak,basic -option grp:alt_shift_toggle,caps:hyper
+
+# Font settings
+font pango:FiraCode Nerd Font Mono 10
+
+## Basics
+
+# Kill focused window
+bindsym $mod+h kill
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Reload the configuration file/restart i3
+bindsym Ctrl+$alt+r reload
+bindsym Ctrl+$alt+a reload
+
+# Shutdown prompt
+bindsym Ctrl+$alt+q exec shutdown_prompt
+bindsym Ctrl+$alt+l exec betterlockscreen -l
+
+# exit i3 (logs you out of your X session)
+bindsym Ctrl+$alt+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+## Launch programs
+
+# Terminal
+bindsym $mod+Return exec $term
+
+# Browser
+bindsym $mod+m exec $browser
+
+# Launcher
+bindsym $mod+space exec $launcher
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+## Moving around
+
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Move the focused window
+bindsym $mod+$alt+$left move left
+bindsym $mod+$alt+$down move down
+bindsym $mod+$alt+$up move up
+bindsym $mod+$alt+$right move right
+
+## Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+
+# Switch to workspace
+bindsym $mod+l workspace number $ws1
+bindsym $mod+u workspace number $ws2
+bindsym $mod+y workspace number $ws3
+bindsym $mod+semicolon workspace number $ws4
+
+# Move focused container to workspace
+bindsym $mod+$alt+l move container to workspace number $ws1
+bindsym $mod+$alt+u move container to workspace number $ws2
+bindsym $mod+$alt+y move container to workspace number $ws3
+bindsym $mod+$alt+semicolon move container to workspace number $ws4
+
+## Resize
+bindsym $mod+z mode "resize"
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $right resize grow width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+}
+
+## Other stuff
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+$alt+space floating toggle
+
+# battery_time
+bindsym $mod+t exec battery_time
+
+# Audio bindings
+bindsym $mod+s exec pulsemixer --change-volume +5 \
+	&& notify-send.sh "Volume: $(pulsemixer --get-volume)" --replace-file=/tmp/volume_notification
+bindsym $mod+r exec pulsemixer --change-volume -5 \
+	&& notify-send.sh "Volume: $(pulsemixer --get-volume)" --replace-file=/tmp/volume_notification
+bindsym $mod+a exec pulsemixer --toggle-mute \
+	&& notify-send.sh "Volume: $(pulsemixer --get-mute)" --replace-file=/tmp/volume_notification
+bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +5 \
+	&& notify-send.sh "Volume: $(pulsemixer --get-volume)" --replace-file=/tmp/volume_notification
+bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -5 \
+	&& notify-send.sh "Volume: $(pulsemixer --get-volume)" --replace-file=/tmp/volume_notification
+bindsym XF86AudioMute exec pulsemixer --toggle-mute \
+	&& notify-send.sh "Volume: $(pulsemixer --get-mute)" --replace-file=/tmp/volume_notification
+
+# Backlight bindings
+bindsym XF86MonBrightnessDown exec light -U 10 \
+	&& notify-send.sh "Backlight: $(light)" --replace-file=/tmp/light_notification
+bindsym XF86MonBrightnessUp exec light -A 10 \
+	&& notify-send.sh "Backlight: $(light)" --replace-file=/tmp/light_notification
+bindsym $mod+q exec light -U 10 \
+	&& notify-send.sh "Backlight: $(light)" --replace-file=/tmp/light_notification
+bindsym $mod+w exec light -A 10 \
+	&& notify-send.sh "Backlight: $(light)" --replace-file=/tmp/light_notification
+
+## Style
+
+default_border pixel 3
+
+## TODO functionality to check out in the future
+
+# split in horizontal orientation
+# nbindsym $mod+h split h
+
+# split in vertical orientation
+# nbindsym $mod+v split v
+
+# change container layout (stacked, tabbed, toggle split)
+# check out this functionality
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
+
+
+# change focus between tiling / floating windows
+# bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+# bindsym $mod+a focus parent
+
+# focus the child container
+# bindsym $mod+d focus child
