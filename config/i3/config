@@ -1,4 +1,5 @@
 ## Exec commands
+exec_always xrandr --output DP-1 --mode 1920x1080 --pos 0x0 --transform 2,0,0,0,2,0,0,0,1 --output eDP-1 --mode 3840x2160 --pos 3840x0 --primary
 exec dunst
 exec redshift
 exec cozy-desktop
@@ -20,7 +21,7 @@ exec_always wallrnd --image ~/wallpaper.svg --config ~/.config/wallrnd/wallrnd.t
 exec_always nitrogen --set-scaled ~/wallpaper.svg
 
 # Keyboard input configuration
-exec setxkbmap -model pc105 -layout us,us -variant colemak,basic -option grp:alt_shift_toggle,caps:hyper
+exec_always /home/bram/repos/dotfiles/scripts/set_keyboards
 
 # Font settings
 font pango:FiraCode Nerd Font Mono 10
