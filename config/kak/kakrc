@@ -46,6 +46,8 @@ addhl global/ number-lines
 addhl global/ wrap
 # Color column 72
 addhl global/ column 72 PrimarySelection
+# Parenthesis matching
+addhl global/ show-matching
 
 # Plugins
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
@@ -73,6 +75,13 @@ hook global WinSetOption filetype=python %{
     # Remap tab to four spaces
     set-option window indentwidth 4
     map global insert <tab> <space><space><space><space>
+
+    # Usermode toggle breakpoint with s
+    map global user s obreakpoint()<esc> -docstring 'Insert breakpoint after current line'
+    map global user S xd -docstring 'Remove breakpoint on current line'
+
+    # Highlight breakpoints
+    # TODO
 }
 
 # Latex settings
