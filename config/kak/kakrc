@@ -39,6 +39,7 @@ hook global InsertCompletionHide .* %{
 
 map global user W '|fmt --width 72<ret>' -docstring "Wrap to 72 columns"
 map global user l %{: enter-user-mode lsp<ret>} -docstring "LSP mode"
+map global user c %{:comment-line<ret>}
 
 # Line numbering
 addhl global/ number-lines
@@ -81,7 +82,11 @@ hook global WinSetOption filetype=python %{
     map global user S xd -docstring 'Remove breakpoint on current line'
 
     # Highlight breakpoints
+    addhl global/ regex breakpoint\(\) 0:default,red
     # TODO
+    hook window BufWritePost .* %{
+        echo %sh{ echo $kak_reg_dot }
+    }
 }
 
 # Latex settings
