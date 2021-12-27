@@ -10,7 +10,6 @@
 
 This is a list of packages that should result in a working config.
 
-
 ```
 sway
 gnome
