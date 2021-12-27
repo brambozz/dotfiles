@@ -13,7 +13,12 @@ map <C-e> scroll half-up
 # Zoom
 map t zoom in
 map s zoom out
-map r zoom best-fit
+map r adjust_window best-fit
+map w adjust_window width
+
+# Find
+map m search forward
+map M search backward
 
 # Other settings
 set selection-clipboard clipboard

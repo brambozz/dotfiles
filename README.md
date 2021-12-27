@@ -29,21 +29,24 @@ base-devel
 imv
 autotiling (aur)
 redshift-wlr-gamma-control-git (aur)
-[notify-send.py](https://github.com/phuhl/notify-send.py) (pip)
+[notify-send.sh](https://github.com/vlevit/notify-send.sh) (aur)
 ```
 
 # Display manager configuration
 
 I use `gdm` as display manager. This will automatically detect sessions
 for `gnome` and `sway`. However, the sessions for `sway` need to be
-changed, in order to link to the correct configuration file.
-Change `/usr/share/wayland-sessions/sway.desktop` to the following.
+changed, in order to support nvidia driver. I make it a separate file
+`sway_nvidia.desktop`, such that it does not get overwritten by sway
+updates.
+
+Also, I need to link to the correct config file.
 
 ```
 [Desktop Entry]
-Name=Sway
+Name=Sway with NVIDIA
 Comment=An i3-compatible Wayland compositor
-Exec=sway -c /home/bram/.config/sway/{goat, thinkpad}
+Exec=sway --my-next-gpu-wont-be-nvidia -c /home/bram/.config/sway/{goat, thinkpad}
 Type=Application
 ```
 
@@ -58,6 +61,14 @@ I therefore define my environment variables in `.pam_environment`.
 zathura
 zathura-pdf-poppler
 zathura-djvu
+```
+
+## Font
+
+I use `Fira Sans` and `Nerd Font Fira Code`. Download them as:
+```
+otf-fira-sans
+nerd-fonts-fira-code (aur)
 ```
 
 ## Wallrnd
@@ -210,6 +221,15 @@ And symlink `nvimpager/init.vim` to `~/.config/nvimpager/init.vim`.
 
 This also needs the `python-neovim` package to work.
 
+# zsh
+
+I recently switched to `zsh` as shell. Additional packages to get the
+config working:
+
+```
+starship
+```
+
 # Kakoune
 
 Experimenting with `kakoune` as new text editor. Config needs the
@@ -219,10 +239,13 @@ following packages to work:
 python-black
 python-language-server
 kak-lsp
+texlab
 ```
 
 Also [plug.kak](https://github.com/robertmeta/plug.kak) should be
 installed. Follow the instructions in the repository.
+
+After initial install, run `:plug-install` to install all plugins.
 
 Plugins that I want to check out:
 
@@ -232,22 +255,19 @@ kakoune-buffers
 
 # cron
 
-In the scripts directory there are a couple of scripts that I set up
-to run in cron. Some of them require notifications, and cron needs
-some environment variables to run properly. I recommend putting the
-following lines on top of the crontab.
-
-```
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-DISPLAY=:0
-```
+Install `cronie` and enable `cronie.service`.
 
 I check my battery capacity with cron, with the following line
 in the crontab:
 
 ```
-*/5 * * * * battery_cap_check
+*/5 * * * * /usr/local/bin/battery_cap_check
+```
+
+I sync taskwarrior with this:
+
+```
+*/10 * * * * /usr/bin/task sync
 ```
 
 # yay
@@ -264,7 +284,7 @@ makepkg -si
 # mako
 
 Notification daemon together with 
-[notify-send.py](https://github.com/phuhl/notify-send.py) is fire!
+[notify-send.sh](https://github.com/phuhl/notify-send.py) is fire!
 
 # pulseaudio
 

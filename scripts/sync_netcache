@@ -2,32 +2,24 @@
 
 # Script to automatically and realtime sync local changes to netcache
 
-destination="/mnt/netcache/pelvis/projects/bram/repos"
-paths="/home/bram/repos/abdomenmrus-cinemri-reader-study 
-	/home/bram/repos/abdomenmrus-cinemri-registration  
-	/home/bram/repos/abdomenmrus-cinemri-baselines  
-	/home/bram/repos/iterative_unet
-	/home/bram/repos/abdomenmrus-cinemri"
+destination_prefix="/mnt/netcache/pelvis/projects/bram/repos/"
+source_prefix="/home/bram/repos/"
+paths="abdomenmrus-cinemri-reader-study 
+	abdomenmrus-cinemri-registration  
+	abdomenmrus-cinemri-baselines  
+	abdomenmrus-cinemri-motion-detection
+	abdomenmrus-cinemri-quality-reader-study
+	abdomenmrus-cinemri-voxelmorph
+	iterative_unet
+	abdomenmrus-cinemri"
 
-# Initial sync
-echo "Performing initial sync"
-rsync -avz --exclude=".*" --exclude="__*" $paths $destination
-echo "Initial sync done"
+# Setup clsyncs
+for path in $paths
+do
+    watch=$source_prefix$path
+    dest=$destination_prefix$path
 
-# Watch realtime changes
-while true; do
-inotifywait -r -e modify,create,delete,move --format "%w" $paths |
-	while read filename; do
-		# Find watched path
-		for path in $paths
-		do
-                    if [[ $filename == *$path* ]]; then
-                        watched_path=$path
-                    fi
-                done
-		echo "Detected changes in file: $watched_path"
+    clsync -Mrsyncdirect -W $watch -D $dest -R /home/bram/repos/dotfiles/scripts/sync_rules -w 0 -t 0 -b
 
-		# Perform sync
-		rsync -avz --exclude=".*" --exclude="__*" $watched_path $destination
-	done
+    echo Now watching dir $watch
 done

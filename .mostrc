@@ -1,0 +1,6 @@
+setkey "down" "n"
+setkey "page_down" "^N"
+setkey "up" "e"
+setkey "page_up" "^E"
+setkey "search_forward" "/"
+setkey "find_next" "m"

@@ -54,6 +54,7 @@ alias gps='git push'
 alias ga='git add'
 alias gau='git add -u'
 alias gc='git commit -e'
+alias gd='git diff'
 
 # New terminal opens in last working directory
 # PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
@@ -102,21 +103,19 @@ scan()
 }
 
 PS1='[\u@\h \W]\$ '
-# . /home/bram/miniconda3/etc/profile.d/conda.sh  # commented out by conda initialize
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-if [ -f "/home/bram/miniconda3/etc/profile.d/conda.sh" ]; then
-. "/home/bram/miniconda3/etc/profile.d/conda.sh"
-elif [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-. "/opt/miniconda3/etc/profile.d/conda.sh"
+__conda_setup="$('/home/bram/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
 else
-export PATH="/home/bram/miniconda3/bin:$PATH"
+    if [ -f "/home/bram/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bram/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bram/miniconda3/bin:$PATH"
+    fi
 fi
-#fi
-#unset __conda_setup
+unset __conda_setup
 # <<< conda initialize <<<
+
