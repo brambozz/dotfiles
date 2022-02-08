@@ -42,11 +42,13 @@ updates.
 
 Also, I need to link to the correct config file.
 
+Location is `/usr/share/wayland-sessions/sway_nvidia.desktop`.
+
 ```
 [Desktop Entry]
 Name=Sway with NVIDIA
 Comment=An i3-compatible Wayland compositor
-Exec=sway --my-next-gpu-wont-be-nvidia -c /home/bram/.config/sway/{goat, thinkpad}
+Exec=sway --unsupported-gpu -c /home/bram/.config/sway/{goat, thinkpad}
 Type=Application
 ```
 
