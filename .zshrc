@@ -8,9 +8,17 @@ SAVEHIST=1000
 setopt share_history
 
 # Keybindings
+typeset -g -A key
+key[Control-Left]="${terminfo[kLFT5]}"
+key[Control-Right]="${terminfo[kRIT5]}"
+
 bindkey -e
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+
+
+[[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
+[[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
 
 # Enable completion
 autoload -Uz compinit
@@ -29,6 +37,7 @@ alias e='$EDITOR'  # e for editor
 alias w='nmcli d wifi'  # w for wifi
 alias wcon='nmcli d wifi c'  # wc for wifi connect
 alias c='wl-copy -n'  # c for copy
+alias o='xdg-open'  # o for open
 
 ## Taskwarrior
 alias t='task'  # t for task
@@ -47,9 +56,10 @@ alias ddhzoom='xdg-open "https://zoom.us/j/99805504072?pwd=K1BhQlFKQkp5OTJLZU1aT
 alias vileplume='sshfs datateam@vileplume:/ ~/shares/vileplume'
 alias stopjob='ssh dlc-ditto -l diag ./c-stop'
 alias dlc='~/dc/phd/scripts/dlc'
-alias tens='conda activate dl && tensorboard --logdir . && conda deactivate'
+alias tens='conda activate cinemri && tensorboard --logdir . && conda deactivate'
 alias texmk='latexmk -pdf -pvc'
 ## Git
+alias lg='lazygit'
 alias gst='git status'
 alias gpl='git pull'
 alias gps='git push'
@@ -57,6 +67,8 @@ alias ga='git add'
 alias gau='git add -u'
 alias gc='git commit -e'
 alias gd='git diff'
+
+alias luxserver='serve ~/dc/phd/challenges/lux/dist'
 
 # Configure nnn cd on quit
 export NNN_TMPFILE="/tmp/nnn"
@@ -97,5 +109,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+#
+
+export PATH="/home/bram/.local/bin:$PATH"
+export PATH="/home/bram/repos/brightspace-grading-tool/no-bs:$PATH"
 
 eval "$(starship init zsh)"

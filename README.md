@@ -57,6 +57,12 @@ Type=Application
 When starting `sway` from `gdm`, `.bash_profile` is not sourced.
 I therefore define my environment variables in `.pam_environment`.
 
+# Bluetooth
+
+First, follow instructions [here](https://wiki.archlinux.org/title/Bluetooth#Auto_power-on_after_boot/resume).
+
+Then, make sure that blueman is started automatically
+
 ## Other packages
 
 ```
