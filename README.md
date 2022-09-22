@@ -227,14 +227,6 @@ git config --global core.pager nvimpager
 ```
 And symlink `nvimpager/init.vim` to `~/.config/nvimpager/init.vim`.
 
-#### Python black
-
-I use python black for autoformatting my code. To install, simply
-run:
-```
-sudo pip install black
-```
-
 This also needs the `python-neovim` package to work.
 
 # zsh
@@ -325,16 +317,9 @@ I make symbolic links to all of them in /usr/local/bin.
 For mail I switched to `geary`. Coupling the outlook addresses is easy.
 For the webmail, the mail server for IMAP and SMTP is `mail.zxcs.nl`.
 
-# Desired software list
+# Note taking
 
-This is a list with things I want to switch to at some point.
-
-- Zathura (PDF viewer)
-- qutebrowser (browser)
-- mpv (media player)
-- btpd (bittorrent client)
-- DASH (shell)
-- Mutt (email client)
+I started using `qownnotes` to write notes. I sync them with `cozy-desktop`.
 
 [1]: https://www.reddit.com/r/vim/comments/pu71n/remap_hjkl_to_jkl_anyone/
 [2]: https://www.reddit.com/r/vim/comments/1lz25q/why_hjkl_for_navigation_not_jkl/
