@@ -1,11 +1,14 @@
 # General sway config, loaded from specific configs 'thinkpad' and 
 # 'goat'
 
+# Fix slow loading of gtk+ applications 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # Launch programs
 exec mako
 exec autotiling
-exec redshift
 exec cozy-desktop
+exec blueman-applet
+exec gammastep -l 51.807802:5.868613 -t 6500:3500
 
 ## Set wallpaper
 exec_always wallrnd --image ~/wallpaper.svg --config ~/.config/wallrnd/wallrnd.toml
@@ -99,6 +102,9 @@ bindsym Ctrl+Alt+Escape exec swaynag -t warning -m 'You pressed the exit shortcu
 # Terminal
 bindsym $mod+Return exec $term
 
+# Scatchpad
+bindsym $mod+p exec $term kak scratch
+
 # Browser
 bindsym $mod+m exec $browser
 
@@ -161,7 +167,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 ## Resize
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -182,6 +188,8 @@ default_border pixel 3
 gaps inner 10
 gaps outer -10
 smart_gaps on
+
+#for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
 
 ### Colors
 
