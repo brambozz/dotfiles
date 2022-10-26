@@ -1,0 +1,16 @@
+export EDITOR=kak
+export VISUAL=kak
+export BROWSER=brave
+export TERM=kitty
+export PAGER=most
+export MANPAGER=most
+export CUPS_USER='umcn\z955156'
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CURRENT_DESKTOP=sway
+export GRIM_DEFAULT_DIR=$HOME/screenshots
+export CINE_MRI_ARCHIVE=$HOME/archives/cinemri_mha
+export CINE_MRI_META=$HOME/repos/abdomenmrus-cinemri-archive
+export HISTCONTROL=ignorespace
+export PICAI_LABELS_ROOT=$HOME/repos/picai_labels
+export PICAI_DATA_ROOT=$HOME/data/picai
+export PICAI_IMAGES_ROOT=/mnt/netcache/pelvis/data/prostate-MRI/picai/public_training/images
