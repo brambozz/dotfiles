@@ -55,7 +55,11 @@ Type=Application
 # Environment variables
 
 When starting `sway` from `gdm`, `.bash_profile` is not sourced.
-I therefore define my environment variables in `.pam_environment`.
+I used to define my environment variables in `.pam_environment`, but this
+is now deprecated.
+
+Instead, I set them in `~/.config/environment.d/envvars.conf` as described
+[here](https://wiki.archlinux.org/title/Environment_variables#Wayland_environment)
 
 # Bluetooth
 
