@@ -1,8 +1,6 @@
 # General sway config, loaded from specific configs 'thinkpad' and 
 # 'goat'
 
-# Fix slow loading of gtk+ applications 
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 # Launch programs
 exec mako
 exec autotiling
@@ -21,7 +19,7 @@ set $down n
 set $up e
 set $right i
 set $term kitty
-set $browser brave
+set $browser MOZ_ENABLE_WAYLAND=1 firefox
 set $launcher wofi --show run
 
 ## Input configuration
@@ -39,6 +37,10 @@ input 51984:4422:Keebio_Levinson xkb_options ""
 
 ## Scrolling with mx ergo
 input "1133:45085:Logitech_MX_Ergo_Multi-Device_Trackball" {
+  scroll_method on_button_down
+  scroll_button button8
+}
+input "1133:45085:MX_Ergo" {
   scroll_method on_button_down
   scroll_button button8
 }
@@ -190,6 +192,7 @@ gaps outer -10
 smart_gaps on
 
 #for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+# for_window [app_id="org.musescore.MuseScore"] floating enable
 
 ### Colors
 
@@ -197,4 +200,4 @@ include ./colors
 
 include /etc/sway/config.d/*
 
-exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
