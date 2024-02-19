@@ -1,8 +1,8 @@
 # %%base16_template: zathura##default %%
-set recolor-darkcolor "#e9e9f4"
-set recolor-lightcolor "#282936"
-set default-bg "#282936"
-set statusbar-bg "#3a3c4e"
-set statusbar-fg "#e9e9f4"
+set recolor-darkcolor "#d5c4a1"
+set recolor-lightcolor "#1d2021"
+set default-bg "#1d2021"
+set statusbar-bg "#3c3836"
+set statusbar-fg "#d5c4a1"
 
 # %%base16_template_end%%

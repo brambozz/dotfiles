@@ -5,13 +5,23 @@
 destination_prefix="/mnt/netcache/pelvis/projects/bram/repos/"
 source_prefix="/home/bram/repos/"
 paths="abdomenmrus-cinemri-reader-study 
-	abdomenmrus-cinemri-registration  
-	abdomenmrus-cinemri-baselines  
-	abdomenmrus-cinemri-motion-detection
-	abdomenmrus-cinemri-quality-reader-study
-	abdomenmrus-cinemri-voxelmorph
-	iterative_unet
-	abdomenmrus-cinemri"
+	abdomenmrus-cinemri-archive
+	abdomenmrus-cinemri-patch-level
+	abdomenmrus-cinemri-spatiotemporal
+        universal-classifier-t9603
+	flare22-brananas
+	diag-nnunet
+	nnunetv2
+	nnUNet
+	medvlp
+	ugssl
+	abdomenmrus-cinemri
+	relearn
+	stylegan3
+	stylegan-xl
+	PyTorch-StudioGAN
+	pi-cai-chu
+	abdomenmrus-cinemri-textual-inversion"
 
 # Setup clsyncs
 for path in $paths

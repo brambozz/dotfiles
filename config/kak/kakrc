@@ -69,10 +69,6 @@ hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp|la
 
 # Python settings
 hook global WinSetOption filetype=python %{
-    # Black autoformatting
-    set-option window formatcmd 'black -q  -'
-    hook -group blackfmt buffer BufWritePre .* %{format}
-
     # Remap tab to four spaces
     set-option window indentwidth 4
     map global insert <tab> <space><space><space><space>
@@ -90,8 +86,8 @@ hook global WinSetOption filetype=python %{
 }
 
 # Latex settings
-hook global WinSetOption filetype=latex %{
-    hook window BufWritePre .* %{
-        nop %sh{ latexmk -pdf > /dev/null 2>&1 < /dev/null & }
-    }
-}
+# hook global WinSetOption filetype=latex %{
+#     hook window BufWritePre .* %{
+#         nop %sh{ latexmk -pdf > /dev/null 2>&1 < /dev/null & }
+#     }
+# }

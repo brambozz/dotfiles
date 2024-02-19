@@ -1,9 +1,9 @@
 # %%base16_template: sway##default %%
-# Base16 Dracula - sway color config
-# Scheme by Dracula
+# Base16 Gruvbox dark, hard - sway color config
+# Scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-client.focused #62d6e8 #282936 #62d6e8 #62d6e8 #62d6e8
-client.focused_inactive #282936 #282936 #e9e9f4 #282936 #282936
-client.unfocused #282936 #282936 #e9e9f4 #282936 #282936
+client.focused #bdae93 #1d2021 #bdae93 #bdae93 #bdae93
+client.focused_inactive #1d2021 #1d2021 #d5c4a1 #1d2021 #1d2021
+client.unfocused #1d2021 #1d2021 #d5c4a1 #1d2021 #1d2021
 
 # %%base16_template_end%%

@@ -36,7 +36,7 @@ floating_modifier $mod
 
 # Reload the configuration file/restart i3
 bindsym Ctrl+$alt+r reload
-bindsym Ctrl+$alt+a reload
+bindsym Ctrl+$alt+a restart
 
 # Shutdown prompt
 bindsym Ctrl+$alt+q exec shutdown_prompt

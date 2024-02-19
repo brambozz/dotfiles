@@ -2,7 +2,7 @@
 [Removed Associations]
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
-image/gif=imv.desktop
+image/gif=qview.desktop
 image/jpeg=imv.desktop
 image/png=imv.desktop
 image/svg+xml=imv.desktop

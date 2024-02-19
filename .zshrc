@@ -47,6 +47,11 @@ alias t_lastweeks='task end.after:today-2wk completed'
 
 ## Phd 
 alias p='cd /mnt/netcache/pelvis/projects/bram'
+alias uc_raw='cd /mnt/netcache/bodyct/experiments/universal_classifier_t9603/data/raw/nnUNet_raw_data/Task002_Adhesions'
+alias uc='cd /mnt/netcache/bodyct/experiments/universal_classifier_t9603/data/trained_models/nnUNet/3d_fullres/Task002_Adhesions'
+alias picai='cd /mnt/netcache/pelvis/projects/bram/data/picai/'
+alias flare='cd /mnt/netcache/pelvis/projects/natalia/data'
+alias flare-repo='cd /mnt/netcache/pelvis/projects/natalia/scripts/flare22-brananas'
 if [ -f $HOME/.vpn_alias ]; then
     . $HOME/.vpn_alias
 fi
