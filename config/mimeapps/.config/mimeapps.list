@@ -1,0 +1,10 @@
+[Added Associations]
+[Removed Associations]
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+image/gif=qview.desktop
+image/jpeg=imv.desktop
+image/png=imv.desktop
+image/svg+xml=imv.desktop
+image/tiff=imv.desktop
+audio/mpeg=mpv.desktop

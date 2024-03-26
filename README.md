@@ -108,6 +108,8 @@ links to useful information so that I can find stuff back later.
 It starts off with an overview of what I did to setup Arch to my
 preferences.
 
+Trying to follow [this](https://venthur.de/2021-12-19-managing-dotfiles-with-stow.html) to do config files better, with stow.
+
 ## Arch linux Installation
 
 Just follow the wiki. I also installed `wifi-menu`, because it makes

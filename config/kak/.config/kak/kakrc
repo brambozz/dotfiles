@@ -1,0 +1,93 @@
+# TODO: make all often used normal keys homerow +/- 1
+# Remap movement keys (plus modifiers)
+map global normal n j
+map global normal N J
+map global normal e k
+map global normal E K
+map global normal i l
+map global normal I L
+map global normal o h
+map global normal O H
+map global normal <a-o> <a-h>
+map global normal <a-i> <a-l>
+
+# Remap scrolling
+map global normal <c-e> <c-u>
+map global normal <c-n> <c-d>
+
+# Remap counterparts of movement keys
+map global normal l i
+map global normal L I
+map global normal k o
+map global normal K O
+map global normal h e
+map global normal H E
+map global normal <a-l> <a-i>
+
+# Remap search keys
+map global normal m n
+map global normal M <a-n>
+
+# Completion menu remaps
+hook global InsertCompletionShow .* %{
+    map window insert <c-e> <c-p>
+}
+
+hook global InsertCompletionHide .* %{
+    unmap window insert <c-e> <c-p>
+}
+
+map global user W '|fmt --width 72<ret>' -docstring "Wrap to 72 columns"
+map global user l %{: enter-user-mode lsp<ret>} -docstring "LSP mode"
+map global user c %{:comment-line<ret>}
+
+# Line numbering
+addhl global/ number-lines
+# Line wrapping
+addhl global/ wrap
+# Color column 72
+addhl global/ column 72 PrimarySelection
+# Parenthesis matching
+addhl global/ show-matching
+
+# Plugins
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "lePerdu/kakboard" %{
+        hook global WinCreate .* %{ kakboard-enable }
+}
+plug 'mreppen/kakoune-sway' %{
+    set-option global windowing_modules 'x11'
+    map global user n ': sway-new<ret>' -docstring 'Clone this window via sway'
+}
+
+## kak-lsp configuration
+eval %sh{kak-lsp --kakoune -s $kak_session}
+hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp|latex) %{
+    lsp-enable-window
+}
+
+
+# Python settings
+hook global WinSetOption filetype=python %{
+    # Remap tab to four spaces
+    set-option window indentwidth 4
+    map global insert <tab> <space><space><space><space>
+
+    # Usermode toggle breakpoint with s
+    map global user s obreakpoint()<esc> -docstring 'Insert breakpoint after current line'
+    map global user S xd -docstring 'Remove breakpoint on current line'
+
+    # Highlight breakpoints
+    addhl global/ regex breakpoint\(\) 0:default,red
+    # TODO
+    hook window BufWritePost .* %{
+        echo %sh{ echo $kak_reg_dot }
+    }
+}
+
+# Latex settings
+# hook global WinSetOption filetype=latex %{
+#     hook window BufWritePre .* %{
+#         nop %sh{ latexmk -pdf > /dev/null 2>&1 < /dev/null & }
+#     }
+# }

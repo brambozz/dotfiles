@@ -1,0 +1,19 @@
+default-timeout=5000
+layer=overlay
+padding=5
+margin=0
+border-size=5
+font=monospace 14
+
+# %%base16_template: mako##default %%
+# Base16 Gruvbox dark, hard - mako color config
+# Scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+background-color=#1d2021
+text-color=#d5c4a1
+border-color=#d5c4a1
+
+[urgency=high]
+text-color=#fb4934
+border-color=#fb4934
+
+# %%base16_template_end%%
