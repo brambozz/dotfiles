@@ -110,6 +110,10 @@ preferences.
 
 Trying to follow [this](https://venthur.de/2021-12-19-managing-dotfiles-with-stow.html) to do config files better, with stow.
 
+```
+stow --target=$HOME --restow */
+```
+
 ## Arch linux Installation
 
 Just follow the wiki. I also installed `wifi-menu`, because it makes
