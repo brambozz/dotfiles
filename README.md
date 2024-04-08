@@ -334,3 +334,7 @@ I started using `qownnotes` to write notes. I sync them with `cozy-desktop`.
 [1]: https://www.reddit.com/r/vim/comments/pu71n/remap_hjkl_to_jkl_anyone/
 [2]: https://www.reddit.com/r/vim/comments/1lz25q/why_hjkl_for_navigation_not_jkl/
 [3]: http://xahlee.info/kbd/vi_hjkl_vs_inverted_t_ijkl_arrow_keys.html
+
+# Github
+
+git config --global credential.helper store
