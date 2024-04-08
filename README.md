@@ -338,3 +338,7 @@ I started using `qownnotes` to write notes. I sync them with `cozy-desktop`.
 # Github
 
 git config --global credential.helper store
+
+# swayosd
+
+I use [swayosd](https://github.com/ErikReider/SwayOSD) for brightness/sound notifications. I followed the README, but did not enable the systemd service, because that messes with caps lock remapping.
