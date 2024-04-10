@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Send battery and time notification
+capacity0=$(cat /sys/class/power_supply/BAT0/capacity)
+status0=$(cat /sys/class/power_supply/BAT0/status)
+current_time=$(date +'%H:%M - %m/%d')
+
+if [ $status0 = "Charging" ] || [ $status1 = "Charging" ]
+then
+	notify-send.sh --replace-file=/tmp/battery_time "$capacity0% ▲ $current_time"
+else
+	notify-send.sh --replace-file=/tmp/battery_time "$capacity0% ▼ $current_time"
+fi

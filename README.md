@@ -111,8 +111,17 @@ preferences.
 Trying to follow [this](https://venthur.de/2021-12-19-managing-dotfiles-with-stow.html) to do config files better, with stow.
 
 ```
+cd config
 stow --target=$HOME --restow */
 ```
+
+For my scripts I do
+
+```
+cd scripts
+sudo stow --target=/usr/local/bin --restow */
+```
+
 
 ## Arch linux Installation
 
