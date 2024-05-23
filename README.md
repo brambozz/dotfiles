@@ -32,6 +32,8 @@ redshift-wlr-gamma-control-git (aur)
 [notify-send.sh](https://github.com/vlevit/notify-send.sh) (aur)
 ```
 
+For firefox, go to `about:config` and turn off kinetic scrolling
+
 # Display manager configuration
 
 I use `gdm` as display manager. This will automatically detect sessions
