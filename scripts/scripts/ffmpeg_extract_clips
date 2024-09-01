@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+
+from pathlib import Path
+import csv
+import argparse
+import subprocess
+
+
+def construct_command(input_file, output_dir, start, stop, name, format):
+    dest = output_dir / format / f"{name}.{format}"
+
+    copy = ""
+
+    # TODO this is much faster, but seems to not be completely accurate
+    # because it cuts on keyframes only
+    # if input_file.suffix == ".mp4" and format == "mp4":
+    #     copy = "-c copy "
+
+    return f"ffmpeg -i {input_file} -ss {start} -to {stop} {copy}{dest}"
+  
+def main(input_file, csv_path, output_dir, formats):
+    # Create output dirs
+    for format in formats:
+        (output_dir / format).mkdir(parents=True, exist_ok=True)
+
+    with open(csv_path) as file_obj: 
+        reader = csv.reader(file_obj) 
+        for row in reader:
+            start, stop, name = row
+            for format in formats:
+                command = construct_command(input_file, output_dir, start, stop, name, format)
+                print(command)
+                subprocess.run(command.split(" ")) 
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Split an mp4 or mp3 into multiple clips. Provide a csv file with start,stop,name on each row and this does the rest.")
+    parser.add_argument('input_file')
+    parser.add_argument('csv_path')
+    parser.add_argument('output_dir')
+    parser.add_argument('--formats', default=["mp4", "mp3"])
+    args = parser.parse_args()
+
+    main(Path(args.input_file), Path(args.csv_path), Path(args.output_dir), args.formats)
