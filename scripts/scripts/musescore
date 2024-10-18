@@ -1,5 +1,5 @@
 #!/bin/sh
 
 pw-metadata -n settings 0 clock.force-rate 44100
-# carla &
-QT_QPA_PLATFORM=xcb mscore &
+mscore &
+carla &

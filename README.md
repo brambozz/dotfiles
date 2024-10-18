@@ -6,6 +6,10 @@
 - [ ] Change look of sway
 - [ ] Look into wlogout
 
+# Power button
+
+set HandlePowerKey=ignore in /etc/systemd/logind.conf
+
 # Essential packages
 
 This is a list of packages that should result in a working config.

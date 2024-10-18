@@ -74,6 +74,7 @@ alias gc='git commit -e'
 alias gd='git diff'
 
 alias luxserver='serve ~/dc/phd/challenges/lux/dist'
+alias eemcs-interactive='ssh -t eemcs tmux new -A -s interactive'
 
 # Configure nnn cd on quit
 export NNN_TMPFILE="/tmp/nnn"
