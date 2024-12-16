@@ -1,10 +1,11 @@
 [Added Associations]
-[Removed Associations]
+image/jpeg=imv-2.desktop;
+
 [Default Applications]
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=okularApplication_pdf.desktop
+audio/mpeg=mpv.desktop
 image/gif=qview.desktop
-image/jpeg=imv.desktop
+image/jpeg=imv-2.desktop;
 image/png=imv.desktop
 image/svg+xml=imv.desktop
 image/tiff=imv.desktop
-audio/mpeg=mpv.desktop
