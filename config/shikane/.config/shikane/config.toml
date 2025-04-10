@@ -1,0 +1,41 @@
+[[profile]]
+name = "home_dock"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
+[[profile.output]]
+enable = true
+search = ["m=0x1404", "s=", "v=California Institute of Technology"]
+mode = "1920x1200@60Hz"
+position = "1080,1430"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = true
+search = ["m=PL2493H", "s=1175003610578", "v=Iiyama North America"]
+mode = "1920x1080@60Hz"
+position = "1080,350"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = true
+search = ["m=Acer R240Y", "s=0x0027A9B3", "v=Acer Technologies"]
+mode = "1920x1080@60Hz"
+position = "0,0"
+scale = 1.0
+transform = "90"
+adaptive_sync = false
+
+[[profile]]
+name = "laptop_only"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
+[[profile.output]]
+enable = true
+search = ["m=0x1404", "s=", "v=California Institute of Technology"]
+mode = "1920x1200@60Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false

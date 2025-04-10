@@ -1,11 +1,12 @@
 [Added Associations]
 image/jpeg=imv-2.desktop;
+image/png=imv-6.desktop;imv-5.desktop;imv-4.desktop;imv-3.desktop;
 
 [Default Applications]
 application/pdf=okularApplication_pdf.desktop
 audio/mpeg=mpv.desktop
 image/gif=qview.desktop
 image/jpeg=imv-2.desktop;
-image/png=imv.desktop
+image/png=imv-6.desktop;
 image/svg+xml=imv.desktop
 image/tiff=imv.desktop
