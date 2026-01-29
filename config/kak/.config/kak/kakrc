@@ -86,6 +86,14 @@ hook global WinSetOption filetype=python %{
     }
 }
 
+# Quarto
+hook global WinSetOption filetype=qmd %{
+    set buffer filetype markdown
+}
+hook global BufCreate .*\.qmd$ %{
+    set buffer filetype markdown
+}
+
 # Latex settings
 # hook global WinSetOption filetype=latex %{
 #     hook window BufWritePre .* %{
