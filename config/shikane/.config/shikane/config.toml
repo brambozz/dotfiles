@@ -5,7 +5,7 @@ exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
 enable = true
 search = ["m=0x1404", "s=", "v=California Institute of Technology"]
 mode = "1920x1200@60Hz"
-position = "1080,1430"
+position = "1081,1430"
 scale = 1.0
 transform = "normal"
 adaptive_sync = false
@@ -14,7 +14,7 @@ adaptive_sync = false
 enable = true
 search = ["m=PL2493H", "s=1175003610578", "v=Iiyama North America"]
 mode = "1920x1080@60Hz"
-position = "1080,350"
+position = "1081,350"
 scale = 1.0
 transform = "normal"
 adaptive_sync = false
@@ -35,6 +35,26 @@ exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
 enable = true
 search = ["m=0x1404", "s=", "v=California Institute of Technology"]
 mode = "1920x1200@60Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile]]
+name = "poffice"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
+[[profile.output]]
+enable = true
+search = ["m=0x1404", "s=", "v=California Institute of Technology"]
+mode = "1920x1200@60.001Hz"
+position = "0,1200"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+[[profile.output]]
+enable = true
+search = ["m=EV2495", "s=48663063", "v=Eizo Nanao Corporation"]
+mode = "1920x1200@59.95Hz"
 position = "0,0"
 scale = 1.0
 transform = "normal"
